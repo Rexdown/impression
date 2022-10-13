@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Header from '../../components/Header/Header';
-import { forWhomCards, advantages } from '../../constants'
+import ProductItem from '../../components/ProductItem/ProdutItem';
+import { forWhomCards, advantages, presentsCards, workshopsCards, productsList } from '../../constants'
 import './MainPage.scss';
 
 const CardForWhom = (url, txt) => {
@@ -20,6 +21,16 @@ const Advantage = (url, title, txt) => {
         <h3 className="advantages__item__content-title">{title}</h3>
         <p className="advantages__item__content-text">{txt}</p>
       </div>
+    </div>
+  );
+};
+
+const PresentCard = (url, txt, count) => {
+  return (
+    <div className="presents__card">
+      <img src={url} alt={txt} className="presents__card-img" />
+      <p className="presents__card-text">{txt}</p>
+      <p className="presents__card-count">{count}</p>
     </div>
   );
 };
@@ -52,6 +63,27 @@ function MainPage() {
       <div className="advantages container">
         <div className="advantages__box">
           {advantages.map((item) => Advantage(item.url, item.title, item.txt))}
+        </div>
+      </div>
+
+      <div className="presents container">
+        <h2 className="presents-title">Что дарим?</h2>
+        <div className="presents__box">
+          {presentsCards.map((item) => PresentCard(item.url, item.txt, item.count))}
+        </div>
+      </div>
+
+      <div className="presents container">
+        <h2 className="presents-title">Подборка мастер-классов</h2>
+        <div className="presents__box">
+          {workshopsCards.map((item) => PresentCard(item.url, item.txt, item.count))}
+        </div>
+      </div>
+
+      <div className="mainProdutList container">
+        <h2 className="mainProdutList-title">Лучшее из раздела “Мастер-класс”</h2>
+        <div className="mainProdutList__list">
+          {productsList.map((product) => <ProductItem product={product} />)}
         </div>
       </div>
     </div>
