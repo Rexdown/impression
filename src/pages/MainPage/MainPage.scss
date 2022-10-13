@@ -1,0 +1,149 @@
+.mainPage {
+  background-color: #F5F5F5;
+}
+
+.mainPage__hello {
+  display: flex;
+  height: 720px;
+  margin-bottom: 50px;
+  position: relative;
+
+  background: url(../../assets/imgs/header-bg.png);
+  background-repeat: no-repeat;
+  
+  &__content {
+    display: flex;
+    flex-direction: column;
+    margin: auto 0;
+    width: 25%;
+
+    &-title {
+      font-weight: 700;
+      font-size: 60px;
+      margin: 0;
+      margin-bottom: 30px;
+      color: #FFFFFF;
+    }
+    &-text {
+      font-size: 20px;
+      margin: 0;
+      margin-bottom: 40px;
+      color: #FFFFFF;
+    }
+    &-btn {
+      outline: none;
+      font: inherit;
+      cursor: pointer;
+      border: 0;
+
+      width: 250px;
+      height: 50px;
+      margin: auto 0;
+      margin-right: 50px;
+      background: #FF3D54;
+      border-radius: 10px;
+      transition: 0.2s;
+
+      color: #FFFFFF;
+      font-size: 16px;
+
+      &:hover {
+        background: #d71f35;
+        transition: 0.2s;
+      }
+    }
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 20px;
+    background-color: #F5F5F5;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    left: 0;
+    bottom: 0;
+  }
+}
+
+.forWhom {
+  padding-bottom: 100px;
+
+  &-title{
+    font-weight: 700;
+    font-size: 44px;
+    color: #222222;
+    margin-bottom: 50px;
+  }
+  &__box {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__card {
+    display: flex;
+    flex-direction: column;
+
+    width: 31%;
+    width: 570px;
+    background: #FFFFFF;
+    border-radius: 30px;
+    cursor: pointer;
+
+    &-img {
+      width: 90%;
+      margin: 0 auto;
+      margin-top: 30px;
+      margin-bottom: 25px;
+    }
+    &-text {
+      margin: 0 auto;
+      font-weight: 500;
+      font-size: 26px;
+      color: #222222;
+      margin-bottom: 25px;
+    }
+  }
+}
+
+.advantages {
+  padding-bottom: 100px;
+
+  &__box {
+    display: flex;
+    justify-content: space-around;
+
+    width: 100%;
+    height: 230px;
+    margin: 0 auto;
+    background: #FFFFFF;
+    border-radius: 30px;
+  }
+
+  &__item {
+    display: flex;
+    margin: auto;
+
+    &-icon {
+      margin-right: 20px;
+    }
+
+    &__content {
+      &-title {
+        margin: 0;
+        margin-bottom: 10px;
+        font-weight: 500;
+        font-size: 26px;
+        color: #222222;
+      }
+      &-text {
+        margin: 0;
+        padding: 0;
+        font-weight: 400;
+        font-size: 18px;
+        color: #222222;
+        opacity: 0.8;
+      }
+    }
+  }
+}
