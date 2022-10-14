@@ -1,0 +1,85 @@
+.Review {
+  display: flex;
+  flex-direction: column;
+  
+  width: 23%;
+  height: 460px;
+  background: #FFFFFF;
+  border-radius: 10px;
+
+  &-img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-bottom: 20px;
+  }
+
+  &-title {
+    margin: 0 5%;
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 20px;
+    color: #222222;
+  }
+
+  &__mark {
+    display: flex;
+    margin: 0 5%;
+    margin-bottom: 15px;
+
+    &-star {
+      width: 20px;
+      margin: auto 0;
+      margin-right: 10px;
+    }
+  }
+
+  &__dignities {
+    margin: 0 5%;
+    margin-bottom: 18px;
+    display: flex;
+
+    &-item {
+      margin: 0;
+      margin-right: 5px;
+
+      padding: 6px 10px;
+      background: #EEEEEE;
+      border-radius: 999px;
+
+      font-weight: 400;
+      font-size: 12px;
+      color: #222222;
+      opacity: 0.7;
+    }
+  }
+
+  &__content {
+    margin: 0 5%;
+    color: #222222;
+    
+    &__author {
+      display: flex;
+
+      &-name {
+        margin: 0;
+        margin-top: auto;
+        margin-right: 10px;
+        font-weight: 500;
+        font-size: 16px;
+      }
+      &-data {
+        margin: 0;
+        margin-top: auto;
+        font-weight: 400;
+        font-size: 12px;
+        opacity: 0.5;
+
+      }
+    }
+    &__text {
+      font-weight: 400;
+      font-size: 14px;
+      opacity: 0.8;
+    }
+  }
+}

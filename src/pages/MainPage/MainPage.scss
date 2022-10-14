@@ -158,6 +158,7 @@
   padding-bottom: 50px;
 
   &-title {
+    margin: 0;
     font-weight: 700;
     font-size: 44px;
     color: #222222;
@@ -216,37 +217,27 @@
   padding-bottom: 100px;
 
   &-title {
+    margin: 0;
     font-weight: 700;
     font-size: 44px;
     color: #222222;
     margin-bottom: 50px;
   }
+}
 
-  &__list {
+.mainReviews {
+  padding-bottom: 100px;
+
+  &-title {
+    margin: 0;
+    font-weight: 700;
+    font-size: 44px;
+    color: #222222;
+    margin-bottom: 50px;
+  }
+  &__box {
     display: flex;
     justify-content: space-between;
   }
 }
 
-.swiper-pagination-bullet {
-  background-color: rgb(123, 0, 0) !important;
-  opacity: 0.3 !important;
-  width: 15px !important;
-  height: 15px !important;
-  margin-right: 10px !important;
-
-  &-active {
-    background-color: #d71f35 !important;
-    opacity: 1 !important;
-  }
-}
-
-.swiper-pagination-fraction {
-  bottom: 5px;
-  left: 0;
-  width: 100%;
-}
-
-.swiper-wrapper {
-  padding-bottom: 70px
-}

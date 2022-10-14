@@ -21,7 +21,9 @@ import cookingCard from './assets/imgs/cooking_card.png'
 import divingCard from './assets/imgs/diving_card.png';
 import horseCard from './assets/imgs/horse_card.png';
 import sushiCard from './assets/imgs/sushi_card.png';
-
+import setExtremeCard from './assets/imgs/setExtreme_card.png';
+import setCookingCard from './assets/imgs/setCooking_card.png';
+import setImpressionsCard from './assets/imgs/setImpressions_card.png';
 
 
 export const forWhomCards = [
@@ -123,7 +125,7 @@ export const workshopsCards = [
   },
 ]
 
-export const productsList = [
+export const productsWorkshopsList = [
   {
     url: divingCard,
     stars: 5,
@@ -203,5 +205,88 @@ export const productsList = [
     text: "Хотите миновать столичные пробки на мотоцикле? Хотите чувствовать...",
     newPrice: "1 800",
     oldPrice: "2 100",
+  },
+]
+
+export const productsSetsList = [
+  {
+    url: setExtremeCard,
+    stars: 5,
+    mark: '4,7',
+    reviews: 244,
+    title: "Набор “Экстрим” для него",
+    text: "Хотите миновать столичные пробки на мотоцикле? Хотите чувствовать...",
+    newPrice: "7 800",
+    oldPrice: "9 000",
+  },
+  {
+    url: setCookingCard,
+    stars: 4,
+    mark: '3,9',
+    reviews: 189,
+    title: "Набор “Кулинария” для нее",
+    text: "Хотите миновать столичные пробки на мотоцикле? Хотите чувствовать...",
+    newPrice: "4 500",
+    oldPrice: "5 200",
+  },
+  {
+    url: setImpressionsCard,
+    stars: 4,
+    mark: '4,1',
+    reviews: 413,
+    title: "Набор “Яркие впечатления” для двоих",
+    text: "Хотите миновать столичные пробки на мотоцикле? Хотите чувствовать...",
+    newPrice: "5 600",
+    oldPrice: "6 000",
+  },
+  {
+    url: setExtremeCard,
+    stars: 5,
+    mark: '4,7',
+    reviews: 244,
+    title: "Набор “Экстрим” для него",
+    text: "Хотите миновать столичные пробки на мотоцикле? Хотите чувствовать...",
+    newPrice: "7 800",
+    oldPrice: "9 000",
+  },
+  {
+    url: setExtremeCard,
+    stars: 5,
+    mark: '4,7',
+    reviews: 244,
+    title: "Набор “Экстрим” для него",
+    text: "Хотите миновать столичные пробки на мотоцикле? Хотите чувствовать...",
+    newPrice: "7 800",
+    oldPrice: "9 000",
+  },
+  {
+    url: setCookingCard,
+    stars: 4,
+    mark: '3,9',
+    reviews: 189,
+    title: "Набор “Кулинария” для нее",
+    text: "Хотите миновать столичные пробки на мотоцикле? Хотите чувствовать...",
+    newPrice: "4 500",
+    oldPrice: "5 200",
+  },
+  {
+    url: setImpressionsCard,
+    stars: 4,
+    mark: '4,1',
+    reviews: 413,
+    title: "Набор “Яркие впечатления” для двоих",
+    text: "Хотите миновать столичные пробки на мотоцикле? Хотите чувствовать...",
+    newPrice: "5 600",
+    oldPrice: "6 000",
+  },
+  {
+    url: setExtremeCard,
+    stars: 5,
+    mark: '4,7',
+    reviews: 244,
+    title: "Набор “Экстрим” для него",
+    text: "Хотите миновать столичные пробки на мотоцикле? Хотите чувствовать...",
+    newPrice: "7 800",
+    oldPrice: "9 000",
   },
 ]

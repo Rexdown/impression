@@ -56,7 +56,6 @@
 
   &-text {
     margin: 0 5%;
-    margin-bottom: 50px;
     font-weight: 400;
     font-size: 18px;
     color: rgba(34, 34, 34, 0.8);
@@ -70,6 +69,8 @@
 
 .ProductItem__buy {
   margin: 0 5%;
+  margin-top: auto;
+  margin-bottom: 20px;
   display: flex;
 
   &-btn {

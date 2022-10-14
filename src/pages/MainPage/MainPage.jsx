@@ -1,14 +1,7 @@
 import React, { useState } from 'react';
-import Header from '../../components/Header/Header';
-import ProductItem from '../../components/ProductItem/ProdutItem';
-import { forWhomCards, advantages, presentsCards, workshopsCards, productsList } from '../../constants'
-
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
+import ProductListSlider from '../../components/ProductListSlider/ProductListSlider';
+import Review from '../../components/Review/Review';
+import { forWhomCards, advantages, presentsCards, workshopsCards, productsWorkshopsList, productsSetsList } from '../../constants'
 
 import './MainPage.scss';
 
@@ -47,7 +40,6 @@ const PresentCard = (url, txt, count) => {
 function MainPage() {
   return (
     <div className="mainPage">
-      <Header/>
       <div className="mainPage__hello container">
         <div className="mainPage__hello__content">
           <h2 className="mainPage__hello__content-title">
@@ -91,21 +83,21 @@ function MainPage() {
 
       <div className="mainProdutList container">
         <h2 className="mainProdutList-title">Лучшее из раздела “Мастер-класс”</h2>
-        <div className="mainProdutList__slider">
-          <Swiper
-            modules={[Pagination, Scrollbar, A11y, Autoplay]}
-            spaceBetween={50}
-            slidesPerView={4}
-            autoplay={{
-              delay: 10000,
-              disableOnInteraction: false,
-            }}
-            pagination={{ clickable: true }}
-            onSlideChange={() => console.log('slide change')}
-            onSwiper={(swiper) => console.log(swiper)}
-          >
-            {productsList.map((product) => <SwiperSlide><ProductItem product={product} /></SwiperSlide>)}
-          </Swiper>
+        <ProductListSlider productsList={productsWorkshopsList} />
+      </div>
+
+      <div className="mainProdutList container">
+        <h2 className="mainProdutList-title">Лучшее из раздела “Наборы”</h2>
+        <ProductListSlider productsList={productsSetsList} />
+      </div>
+
+      <div className="mainReviews container">
+        <h2 className="mainReviews-title">Восторженные отзывы</h2>
+        <div className="mainReviews__box">
+          <Review />
+          <Review />
+          <Review />
+          <Review />
         </div>
       </div>
     </div>

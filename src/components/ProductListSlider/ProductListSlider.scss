@@ -1,0 +1,22 @@
+.swiper-wrapper {
+    padding-bottom: 70px
+  }
+  
+  .swiper-pagination-bullet {
+    background-color: rgb(123, 0, 0) !important;
+    opacity: 0.3 !important;
+    width: 15px !important;
+    height: 15px !important;
+    margin-right: 10px !important;
+  
+    &-active {
+      background-color: #d71f35 !important;
+      opacity: 1 !important;
+    }
+  }
+  
+  .swiper-pagination-fraction {
+    bottom: 5px;
+    left: 0;
+    width: 100%;
+  }
