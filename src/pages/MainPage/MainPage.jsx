@@ -2,7 +2,16 @@ import React, { useState } from 'react';
 import Header from '../../components/Header/Header';
 import ProductItem from '../../components/ProductItem/ProdutItem';
 import { forWhomCards, advantages, presentsCards, workshopsCards, productsList } from '../../constants'
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+
 import './MainPage.scss';
+
 
 const CardForWhom = (url, txt) => {
   return (
@@ -82,8 +91,21 @@ function MainPage() {
 
       <div className="mainProdutList container">
         <h2 className="mainProdutList-title">Лучшее из раздела “Мастер-класс”</h2>
-        <div className="mainProdutList__list">
-          {productsList.map((product) => <ProductItem product={product} />)}
+        <div className="mainProdutList__slider">
+          <Swiper
+            modules={[Pagination, Scrollbar, A11y, Autoplay]}
+            spaceBetween={50}
+            slidesPerView={4}
+            autoplay={{
+              delay: 10000,
+              disableOnInteraction: false,
+            }}
+            pagination={{ clickable: true }}
+            onSlideChange={() => console.log('slide change')}
+            onSwiper={(swiper) => console.log(swiper)}
+          >
+            {productsList.map((product) => <SwiperSlide><ProductItem product={product} /></SwiperSlide>)}
+          </Swiper>
         </div>
       </div>
     </div>
