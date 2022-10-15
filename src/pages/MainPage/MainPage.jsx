@@ -27,7 +27,7 @@ const Advantage = (url, title, txt) => {
 function MainPage() {
   return (
     <div className="mainPage">
-      <Header/>
+      <Header />
       <div className="mainPage__hello container">
         <div className="mainPage__hello__content">
           <h2 className="mainPage__hello__content-title">
