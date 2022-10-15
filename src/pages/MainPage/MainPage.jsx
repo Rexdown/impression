@@ -1,9 +1,14 @@
 import React, { useState } from 'react';
 import ProductListSlider from '../../components/ProductListSlider/ProductListSlider';
 import Review from '../../components/Review/Review';
-import { forWhomCards, advantages, presentsCards, workshopsCards, productsWorkshopsList, productsSetsList } from '../../constants'
+import { forWhomCards, advantages, presentsCards, workshopsCards, productsWorkshopsList, productsSetsList, reviewsList, mainAboutadvantages } from '../../constants'
+
+import mainBg from '../../assets/imgs/main-bg.png'
+import play from '../../assets/icons/play-white.svg'
+import arrow from '../../assets/icons/arrow.svg'
 
 import './MainPage.scss';
+import Footer from '../../components/Footer/Footer';
 
 
 const CardForWhom = (url, txt) => {
@@ -33,6 +38,18 @@ const PresentCard = (url, txt, count) => {
       <img src={url} alt={txt} className="presents__card-img" />
       <p className="presents__card-text">{txt}</p>
       <p className="presents__card-count">{count}</p>
+    </div>
+  );
+};
+
+const AdvantageAbout = (url, title, txt) => {
+  return (
+    <div className="mainAbout__item">
+      <img src={url} alt={title} className="mainAbout__item-icon" />
+      <div className="mainAbout__item__content">
+        <h3 className="mainAbout__item__content-title">{title}</h3>
+        <p className="mainAbout__item__content-text">{txt}</p>
+      </div>
     </div>
   );
 };
@@ -94,12 +111,73 @@ function MainPage() {
       <div className="mainReviews container">
         <h2 className="mainReviews-title">Восторженные отзывы</h2>
         <div className="mainReviews__box">
-          <Review />
-          <Review />
-          <Review />
-          <Review />
+          {reviewsList.map((review) => <Review review={review} />)}
         </div>
       </div>
+
+      <div className="mainAbout">
+        <div className="mainAbout__box container">
+          <h2 className="mainAbout-title">
+            Мы поможем вам сделать отличный подарок
+          </h2>
+          <div className="mainAbout__itemsList">
+            {mainAboutadvantages.map((item) => AdvantageAbout(item.url, item.title, item.txt))}
+          </div>
+        </div>
+        <img src={mainBg} alt="Bg img" className="mainAbout-img" />
+      </div>
+
+      <div className="howItWorks container">
+        <div className="howItWorks__header">
+          <div className="howItWorks__header-title">Как это работает?</div>
+          <div className="howItWorks__header__btn">
+            <div className="howItWorks__header__btn__content">
+              <img src={play} alt="Play" className="howItWorks__header__btn__content-icon" />
+              <p className="howItWorks__header__btn__content-text">Смотреть видео</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="howItWorks__steps">
+          <div className="howItWorks__steps__item">
+            <p className="howItWorks__steps__item-number">1</p>
+            <div className="howItWorks__steps__item__description">
+              <p className="howItWorks__steps__item__description-text">
+                Выбираете подарочный сертификат
+              </p>
+            </div>
+          </div>
+          <img src={arrow} alt="Arrow" className="howItWorks__step-arrow" />
+          <div className="howItWorks__steps__item">
+            <p className="howItWorks__steps__item-number">2</p>
+            <div className="howItWorks__steps__item__description">
+              <p className="howItWorks__steps__item__description-text">
+                Дарите сертификат получателю
+              </p>
+            </div>
+          </div>
+          <img src={arrow} alt="Arrow" className="howItWorks__step-arrow" />
+          <div className="howItWorks__steps__item">
+            <p className="howItWorks__steps__item-number">3</p>
+            <div className="howItWorks__steps__item__description">
+              <p className="howItWorks__steps__item__description-text">
+                Получатель активирует подарок
+              </p>
+            </div>
+          </div>
+          <img src={arrow} alt="Arrow" className="howItWorks__step-arrow" />
+          <div className="howItWorks__steps__item">
+            <p className="howItWorks__steps__item-number">4</p>
+            <div className="howItWorks__steps__item__description">
+              <p className="howItWorks__steps__item__description-text">
+                Яркие впечатления гарантированы
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <Footer />
     </div>
   );
 }
