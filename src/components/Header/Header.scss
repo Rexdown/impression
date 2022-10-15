@@ -117,3 +117,14 @@
     }
   }
 }
+
+.Catalog {
+  min-height: 0;
+  background-color: #fff;
+  transition: 0.3s;
+}
+
+.Catalog-active {
+  min-height: 100vh;
+  transition: 0.3s;
+}
