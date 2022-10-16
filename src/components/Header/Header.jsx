@@ -7,6 +7,8 @@ import catalogArrow from '../../assets/icons/catalog-arrow.svg'
 import search from '../../assets/icons/search.svg'
 import shoppingCart from '../../assets/icons/shopping-cart.svg'
 
+import { catalogForWhom, catalogOpenSpace, catalogTheme, catalogType, catalogOccasion } from '../../constants'
+
 function Header() {
   const [activeCatalog, setActiveCatalog] = useState(false);
   const html = document.getElementsByTagName('html')[0];
@@ -27,7 +29,11 @@ function Header() {
           >
             <img src={catalogIcon} alt="Catalog Icon" className="header__box__left__catalog-icon" />
             <p className="header__box__left__catalog-text">Каталог товаров</p>
-            <img src={catalogArrow} alt="Catalog Arrow" className="header__box__left__catalog-arrow" />
+            <img 
+              src={catalogArrow} 
+              alt="Catalog Arrow" 
+              className={`header__box__left__catalog-arrow ${activeCatalog ? 'header__box__left__catalog-arrow-active' : ''}`} 
+            />
           </div>
         </div>
 
@@ -47,7 +53,28 @@ function Header() {
         </div>
       </div>
 
-      <div className={`catalog ${activeCatalog ? 'catalog-active' : ''}`} />
+      <div className={`catalog ${activeCatalog ? 'catalog-active' : ''} container`}>
+        <div className={`catalog__column ${activeCatalog ? 'catalog__column-active' : ''}`}>
+          <h2 className="catalog__column-title">Для кого</h2>
+          {catalogForWhom.map((item) => <p className="catalog__column-option">{item}</p>)}
+          <h2 className="catalog__column-title secondTitle">На открытом воздухе</h2>
+          {catalogOpenSpace.map((item) => <p className="catalog__column-option">{item}</p>)}
+        </div>
+        <div className={`catalog__column ${activeCatalog ? 'catalog__column-active' : ''}`}>
+          <h2 className="catalog__column-title">Тематика</h2>
+          {catalogTheme.map((item) => <p className="catalog__column-option">{item}</p>)}
+        </div>
+        <div className={`catalog__column ${activeCatalog ? 'catalog__column-active' : ''}`}>
+          <h2 className="catalog__column-title">Тип</h2>
+          {catalogType.map((item) => <p className="catalog__column-option">{item}</p>)}
+          <h2 className="catalog__column-title secondTitle">Повод</h2>
+          {catalogOccasion.map((item) => <p className="catalog__column-option">{item}</p>)}
+        </div>
+        <div className={`catalog__lastColumn ${activeCatalog ? 'catalog__lastColumn-active' : ''}`}>
+            <p className="catalog__lastColumn-generalOption">Корпоративные</p>
+            <p className="catalog__lastColumn-generalOption">Все наборы</p>
+        </div>
+      </div>
     </div>
   );
 }

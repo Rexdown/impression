@@ -39,6 +39,12 @@
         &-arrow {
           margin: auto 0;
           margin-left: 10px;
+          transition: 0.3s;
+
+          &-active {
+            transform: rotate(180deg);
+            transition: 0.3s;
+          }
         }
       }
     }
@@ -123,6 +129,8 @@
 }
 
 .catalog {
+  display: flex;
+
   position: absolute;
   left: 0;
   top: 90px;
@@ -138,4 +146,76 @@
     min-height: calc(100vh - 90px);
     transition: 0.3s;
   }
+
+  &__column {
+    opacity: 0;
+    height: 0;
+    transition: 0.2s;
+    margin-right: 200px;
+
+    &-active {
+      opacity: 1;
+      min-height: auto;
+      margin-top: 50px;
+      transition: 0.4s;
+    }
+
+    &-title {
+      font-weight: 500;
+      font-size: 26px;
+      color: #222222;
+
+      margin: 0;
+      margin-bottom: 20px;
+    }
+
+    &-option {
+      font-weight: 400;
+      font-size: 18px;
+      color: #222222;
+      transition: 0.2s;
+
+      margin: 0;
+      margin-bottom: 15px;
+      cursor: pointer;
+
+      &:hover {
+        color: #FF3D54;
+        transition: 0.2s;
+      }
+    }
+  }
+
+  &__lastColumn {
+    opacity: 0;
+    height: 0;
+    transition: 0.2s;
+    margin-left: 170px;
+
+    &-active {
+      opacity: 1;
+      min-height: auto;
+      margin-top: 50px;
+      transition: 0.4s;
+    }
+
+    &-generalOption {
+      margin: 0;
+      font-weight: 500;
+      font-size: 26px;
+      color: #FF3D54;
+      margin-bottom: 30px;
+      transition: 0.2s;
+      cursor: pointer;
+
+      &:hover {
+        color: #d71f35;
+        transition: 0.2s;
+      }
+    }
+  }
+}
+
+.secondTitle {
+  margin-top: 50px;
 }
