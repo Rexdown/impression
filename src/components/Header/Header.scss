@@ -1,119 +1,141 @@
 .header {
-  display: flex;
-  justify-content: space-between;
-  background: #FFFFFF;
+  position: relative;
+  position: fixed; 
+  width: 100%;
+  z-index: 3; 
 
-  position: fixed;  
-  z-index: 100;  
-  height: 90px;
-  width: 97%; 
-  top: 0;  
-
-  &__left {
+  &__box {
     display: flex;
-    width: 27%;
+    justify-content: space-between;
+    background: #FFFFFF;
 
-    &-logo {
-      margin: auto 0;
-      margin-right: 60px;
-    }
-    &__catalog {
+    z-index: 2;  
+    height: 90px;
+    width: 97%; 
+    top: 0;  
+
+    &__left {
       display: flex;
-      cursor: pointer;
+      width: 27%;
 
-      &-icon {
+      &-logo {
         margin: auto 0;
-        margin-right: 10px;
+        margin-right: 60px;
       }
-      &-text {
-        font-weight: 500;
-        font-size: 16px;
-        color: #FF3D54;
-        margin: auto 0;
-      }
-      &-arrow {
-        margin: auto 0;
-        margin-left: 10px;
-      }
-    }
-  }
+      &__catalog {
+        display: flex;
+        cursor: pointer;
 
-
-  &__nav {
-    display: flex;
-    width: 45%;
-    padding: 0;
-    justify-content: space-around;
-    list-style-type: none;
-
-    &-item {
-      padding: 0;
-      margin: auto 0;
-      font-size: 16px;
-      color: #222222;
-
-      cursor: pointer;
-      transition: 0.3s;
-      position: relative;
-
-      &:last-child {
-        margin-right: 0;
-      }
-
-      &::after {
-        position: absolute;
-        content: '';
-        width: 0;
-        height: 2px;
-        background-color: #FF3D54;
-        transition: 0.36s;
-        left: 0px;
-        bottom: -3px;
-      }
-
-      &:hover {
-        color: #FF3D54;
-        transition: 0.3s;
-        &::after {
-          width: 100%;
-          transition: 0.36s;
+        &-icon {
+          margin: auto 0;
+          margin-right: 10px;
+        }
+        &-text {
+          font-weight: 500;
+          font-size: 16px;
+          color: #FF3D54;
+          margin: auto 0;
+        }
+        &-arrow {
+          margin: auto 0;
+          margin-left: 10px;
         }
       }
     }
-  }
 
+    &__nav {
+      display: flex;
+      width: 45%;
+      padding: 0;
+      justify-content: space-around;
+      list-style-type: none;
 
-  &__right {
-    display: flex;
-    justify-content: end;
-    width: 27%;
+      &-item {
+        padding: 0;
+        margin: auto 0;
+        font-size: 16px;
+        color: #222222;
 
-    &-btn {
-      outline: none;
-      font: inherit;
-      cursor: pointer;
-      border: 0;
+        cursor: pointer;
+        transition: 0.3s;
+        position: relative;
 
-      width: 250px;
-      height: 45px;
-      margin: auto 0;
-      margin-right: 50px;
-      background: #FF3D54;
-      border-radius: 10px;
-      transition: 0.2s;
+        &:last-child {
+          margin-right: 0;
+        }
 
-      color: #FFFFFF;
-      font-size: 16px;
+        &::after {
+          position: absolute;
+          content: '';
+          width: 0;
+          height: 2px;
+          background-color: #FF3D54;
+          transition: 0.36s;
+          left: 0px;
+          bottom: -3px;
+        }
 
-      &:hover {
-        background: #d71f35;
-        transition: 0.2s;
+        &:hover {
+          color: #FF3D54;
+          transition: 0.3s;
+          &::after {
+            width: 100%;
+            transition: 0.36s;
+          }
+        }
       }
     }
-    &-icon {
-      margin: auto 0;
-      cursor: pointer;
-      margin-right: 25px;
+
+    &__right {
+      display: flex;
+      justify-content: end;
+      width: 27%;
+
+      &-btn {
+        outline: none;
+        font: inherit;
+        cursor: pointer;
+        border: 0;
+
+        width: 250px;
+        height: 45px;
+        margin: auto 0;
+        margin-right: 50px;
+        background: #FF3D54;
+        border-radius: 10px;
+        transition: 0.2s;
+
+        color: #FFFFFF;
+        font-size: 16px;
+
+        &:hover {
+          background: #d71f35;
+          transition: 0.2s;
+        }
+      }
+      &-icon {
+        margin: auto 0;
+        cursor: pointer;
+        margin-right: 25px;
+      }
     }
+  }
+}
+
+.catalog {
+  position: absolute;
+  left: 0;
+  top: 90px;
+
+  width: 100%;
+  min-height: 0;
+  background-color: #fff;
+  transition: 0.3s;
+
+  z-index: 1;
+
+  &-active {
+    min-height: calc(100vh - 90px);
+    transition: 0.3s;
   }
 }
