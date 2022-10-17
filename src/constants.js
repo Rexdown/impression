@@ -52,6 +52,13 @@ import heart from './assets/icons/heart.svg'
 import yacht from './assets/icons/yacht.svg'
 import camera from './assets/icons/camera.svg'
 import sale from './assets/icons/sale.svg'
+import fire from './assets/icons/fire.svg'
+
+import workShopMini_1 from './assets/imgs/workShopMini-1.png';
+import workShopMini_2 from './assets/imgs/workShopMini-2.png';
+import workShopMini_3 from './assets/imgs/workShopMini-3.png';
+import workShopMini_4 from './assets/imgs/workShopMini-4.png';
+import workShopMini_5 from './assets/imgs/workShopMini-5.png';
 
 
 export const forWhomCards = [
@@ -512,4 +519,121 @@ export const stocksNav = [
     url: sale,
     text: 'Цена со скидкой',
   }
+]
+
+export const fullWhorckShopsList = [
+  {
+    url: divingCard,
+    stars: 5,
+    mark: '4,9',
+    reviews: 382,
+    tegs: [
+      {
+        url: fire,
+        text: 'Популярно',
+      },
+      {
+        url: woman,
+        text: 'Для нее',
+      },
+      {
+        url: man,
+        text: 'Для него',
+      },
+      {
+        url: parachute,
+        text: 'Полеты',
+      },
+    ],
+    title: "Мастер-класс дайвинга",
+    text: "Хотите миновать столичные пробки на мотоцикле? Хотите чувствовать...",
+    newPrice: "2 700",
+    oldPrice: "2 900",
+    mimiImgs: [
+      workShopMini_1,
+      workShopMini_2,
+      workShopMini_3,
+      workShopMini_4,
+      workShopMini_5,
+      workShopMini_1,
+      workShopMini_2,
+      workShopMini_3,
+    ]
+  },
+  {
+    url: divingCard,
+    stars: 5,
+    mark: '4,9',
+    reviews: 382,
+    tegs: [
+      {
+        url: fire,
+        text: 'Популярно',
+      },
+      {
+        url: woman,
+        text: 'Для нее',
+      },
+      {
+        url: man,
+        text: 'Для него',
+      },
+      {
+        url: parachute,
+        text: 'Полеты',
+      },
+    ],
+    title: "Мастер-класс дайвинга",
+    text: "Хотите миновать столичные пробки на мотоцикле? Хотите чувствовать...",
+    newPrice: "2 700",
+    oldPrice: "2 900",
+    mimiImgs: [
+      workShopMini_1,
+      workShopMini_2,
+      workShopMini_3,
+      workShopMini_4,
+      workShopMini_5,
+      workShopMini_1,
+      workShopMini_2,
+      workShopMini_3,
+    ]
+  },
+  {
+    url: divingCard,
+    stars: 5,
+    mark: '4,9',
+    reviews: 382,
+    tegs: [
+      {
+        url: fire,
+        text: 'Популярно',
+      },
+      {
+        url: woman,
+        text: 'Для нее',
+      },
+      {
+        url: man,
+        text: 'Для него',
+      },
+      {
+        url: parachute,
+        text: 'Полеты',
+      },
+    ],
+    title: "Мастер-класс дайвинга",
+    text: "Хотите миновать столичные пробки на мотоцикле? Хотите чувствовать...",
+    newPrice: "2 700",
+    oldPrice: "2 900",
+    mimiImgs: [
+      workShopMini_1,
+      workShopMini_2,
+      workShopMini_3,
+      workShopMini_4,
+      workShopMini_5,
+      workShopMini_1,
+      workShopMini_2,
+      workShopMini_3,
+    ]
+  },
 ]

@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 
-import { forWhomNav, themeNav, stocksNav } from '../../constants'
+import { forWhomNav, themeNav, stocksNav, fullWhorckShopsList } from '../../constants'
 import arrow from '../../assets/icons/sort-arrow.svg'
 
 import './ProductsPage.scss';
+import ProductFullItem from '../../components/ProductFullItem/ProductFullItem';
 
 const NavItem = (url, text) => {
   return (
@@ -62,8 +63,8 @@ function ProductsPage() {
         </div>
       </div>
 
-      <div className="productsPage__productList">
-
+      <div className="productsPage__productList container">
+        {fullWhorckShopsList.map((item) => <ProductFullItem product={item} />)}
       </div>
     </div>
   );
