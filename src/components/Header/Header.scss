@@ -162,22 +162,30 @@
 
     &-title {
       font-weight: 500;
-      font-size: 26px;
+      font-size: 0;
       color: #222222;
 
       margin: 0;
       margin-bottom: 20px;
+
+      &-active {
+        font-size: 26px;
+      }
     }
 
     &-option {
       font-weight: 400;
-      font-size: 18px;
+      font-size: 0;
       color: #222222;
       transition: 0.2s;
 
       margin: 0;
       margin-bottom: 15px;
       cursor: pointer;
+
+      &-active {
+        font-size: 18px;
+      }
 
       &:hover {
         color: #FF3D54;

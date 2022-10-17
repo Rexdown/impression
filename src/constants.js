@@ -40,6 +40,19 @@ import phone from './assets/icons/phone.svg'
 import email from './assets/icons/email.svg'
 import userSupport from './assets/icons/userSupport.svg'
 
+import manAndWoman from './assets/icons/man-and-woman.svg'
+import woman from './assets/icons/woman.svg'
+import man from './assets/icons/man.svg'
+import parachute from './assets/icons/parachute.svg'
+import surf from './assets/icons/surf.svg'
+import spa from './assets/icons/spa.svg'
+import gun from './assets/icons/gun.svg'
+import brush from './assets/icons/brush.svg'
+import heart from './assets/icons/heart.svg'
+import yacht from './assets/icons/yacht.svg'
+import camera from './assets/icons/camera.svg'
+import sale from './assets/icons/sale.svg'
+
 
 export const forWhomCards = [
   {
@@ -434,7 +447,7 @@ export const catalogType = [
   'Набор впечатлений',
 ]
 
-export const catalogOccasion= [
+export const catalogOccasion = [
   'День рождения',
   'Свадьба',
   'Новый год',
@@ -442,4 +455,61 @@ export const catalogOccasion= [
   '23 февраля',
   '8 марта',
   'Юбилей',
+]
+
+export const forWhomNav = [
+  {
+    url: manAndWoman,
+    text: 'Для двоих',
+  },
+  {
+    url: woman,
+    text: 'Для нее',
+  },
+  {
+    url: man,
+    text: 'Для него',
+  }
+]
+
+export const themeNav = [
+  {
+    url: parachute,
+    text: 'Полеты',
+  },
+  {
+    url: surf,
+    text: 'Экстрим',
+  },
+  {
+    url: spa,
+    text: 'SPA',
+  },
+  {
+    url: gun,
+    text: 'Милитари',
+  },
+  {
+    url: brush,
+    text: 'Мастер-класс',
+  },
+  {
+    url: heart,
+    text: 'Романтика',
+  },
+  {
+    url: yacht,
+    text: 'Отдых на воде',
+  },
+  {
+    url: camera,
+    text: 'Фотосессия',
+  },
+]
+
+export const stocksNav = [
+  {
+    url: sale,
+    text: 'Цена со скидкой',
+  }
 ]

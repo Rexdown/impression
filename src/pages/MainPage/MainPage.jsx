@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+
 import ProductListSlider from '../../components/ProductListSlider/ProductListSlider';
 import Review from '../../components/Review/Review';
 import { forWhomCards, advantages, presentsCards, workshopsCards, productsWorkshopsList, productsSetsList, reviewsList, mainAboutadvantages } from '../../constants'
@@ -8,15 +10,14 @@ import play from '../../assets/icons/play-white.svg'
 import arrow from '../../assets/icons/arrow.svg'
 
 import './MainPage.scss';
-import Footer from '../../components/Footer/Footer';
 
 
 const CardForWhom = (url, txt) => {
   return (
-    <div className="forWhom__card">
+    <Link className="forWhom__card" to="/products">
       <img src={url} alt={txt} className="forWhom__card-img" />
       <p className="forWhom__card-text">{txt}</p>
-    </div>
+    </Link>
   );
 };
 
@@ -34,11 +35,11 @@ const Advantage = (url, title, txt) => {
 
 const PresentCard = (url, txt, count) => {
   return (
-    <div className="presents__card">
+    <Link className="presents__card" to="/products">
       <img src={url} alt={txt} className="presents__card-img" />
       <p className="presents__card-text">{txt}</p>
       <p className="presents__card-count">{count}</p>
-    </div>
+    </Link>
   );
 };
 
@@ -176,8 +177,6 @@ function MainPage() {
           </div>
         </div>
       </div>
-
-      <Footer />
     </div>
   );
 }
