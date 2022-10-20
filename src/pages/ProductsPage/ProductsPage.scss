@@ -176,9 +176,26 @@
     }
   }
 
-  .productsPage__productList {
+  &__productList {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+    padding-bottom: 75px;
+  }
+
+  &__reviews {
     padding-bottom: 100px;
+
+    &-title {
+      margin: 0;
+      font-weight: 700;
+      font-size: 44px;
+      color: #222222;
+      margin-bottom: 50px;
+    }
+    &__box {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 }

@@ -28,6 +28,15 @@ import sushiCard from './assets/imgs/sushi_card.png';
 import setExtremeCard from './assets/imgs/setExtreme_card.png';
 import setCookingCard from './assets/imgs/setCooking_card.png';
 import setImpressionsCard from './assets/imgs/setImpressions_card.png';
+import bearCard from './assets/imgs/bear_card.png';
+import coffeCard from './assets/imgs/coffe_card.png';
+import tennisCard from './assets/imgs/tennis_card.png';
+import cocktailCard from './assets/imgs/cocktail_card.png';
+import vineCard from './assets/imgs/vine_card.png';
+import songCard from './assets/imgs/song_card.png';
+import albomCard from './assets/imgs/albom_card.png';
+import fishingCard from './assets/imgs/fishing_card.png';
+import dancesCard from './assets/imgs/dances_card.png';
 
 import horseReview from './assets/imgs/horseReview.png';
 import motoReview from './assets/imgs/motoReview.png';
@@ -59,6 +68,16 @@ import workShopMini_2 from './assets/imgs/workShopMini-2.png';
 import workShopMini_3 from './assets/imgs/workShopMini-3.png';
 import workShopMini_4 from './assets/imgs/workShopMini-4.png';
 import workShopMini_5 from './assets/imgs/workShopMini-5.png';
+import workShopMini_6 from './assets/imgs/workShopMini-6.png';
+import workShopMini_7 from './assets/imgs/workShopMini-7.png';
+import workShopMini_8 from './assets/imgs/workShopMini-8.png';
+import workShopMini_9 from './assets/imgs/workShopMini-9.png';
+import workShopMini_10 from './assets/imgs/workShopMini-10.png';
+import workShopMini_11 from './assets/imgs/workShopMini-11.png';
+import workShopMini_12 from './assets/imgs/workShopMini-12.png';
+import workShopMini_13 from './assets/imgs/workShopMini-13.png';
+import workShopMini_14 from './assets/imgs/workShopMini-14.png';
+import workShopMini_15 from './assets/imgs/workShopMini-15.png';
 
 
 export const forWhomCards = [
@@ -523,7 +542,8 @@ export const stocksNav = [
 
 export const fullWhorckShopsList = [
   {
-    url: divingCard,
+    id: 1,
+    url: setExtremeCard,
     stars: 5,
     mark: '4,9',
     reviews: 382,
@@ -545,26 +565,52 @@ export const fullWhorckShopsList = [
         text: 'Полеты',
       },
     ],
-    title: "Мастер-класс дайвинга",
+    title: "Набор “Экстрим” для него",
     text: "Хотите миновать столичные пробки на мотоцикле? Хотите чувствовать...",
     newPrice: "2 700",
     oldPrice: "2 900",
     mimiImgs: [
-      workShopMini_1,
-      workShopMini_2,
-      workShopMini_3,
-      workShopMini_4,
-      workShopMini_5,
-      workShopMini_1,
-      workShopMini_2,
-      workShopMini_3,
-    ]
+      {
+        url: workShopMini_1,
+        title: 'Мотоцикл',
+      },
+      {
+        url: workShopMini_2,
+        title: 'Скейтборд',
+      },
+      {
+        url: workShopMini_3,
+        title: 'Сноуборд',
+      },
+      {
+        url: workShopMini_4,
+        title: 'Дайвинг',
+      },
+      {
+        url: workShopMini_5,
+        title: 'Парашют',
+      },
+      {
+        url: workShopMini_1,
+        title: 'Мотоцикл',
+      },
+      {
+        url: workShopMini_2,
+        title: 'Скейтборд',
+      },
+      {
+        url: workShopMini_3,
+        title: 'Сноуборд',
+      },
+    ],
+    isSet: true,
   },
   {
-    url: divingCard,
-    stars: 5,
-    mark: '4,9',
-    reviews: 382,
+    id: 2,
+    url: setCookingCard,
+    stars: 4,
+    mark: '3,8',
+    reviews: 401,
     tegs: [
       {
         url: fire,
@@ -583,22 +629,112 @@ export const fullWhorckShopsList = [
         text: 'Полеты',
       },
     ],
-    title: "Мастер-класс дайвинга",
+    title: "Набор “Кулинария” для нее",
     text: "Хотите миновать столичные пробки на мотоцикле? Хотите чувствовать...",
-    newPrice: "2 700",
-    oldPrice: "2 900",
+    newPrice: "2 995",
+    oldPrice: "3 500",
     mimiImgs: [
-      workShopMini_1,
-      workShopMini_2,
-      workShopMini_3,
-      workShopMini_4,
-      workShopMini_5,
-      workShopMini_1,
-      workShopMini_2,
-      workShopMini_3,
-    ]
+      {
+        url: workShopMini_6,
+        title: 'Десерты',
+      },
+      {
+        url: workShopMini_7,
+        title: 'Шинковка',
+      },
+      {
+        url: workShopMini_8,
+        title: 'Ресторан',
+      },
+      {
+        url: workShopMini_9,
+        title: 'Красивые блюда',
+      },
+      {
+        url: workShopMini_10,
+        title: 'Торты',
+      },
+      {
+        url: workShopMini_6,
+        title: 'Десерты',
+      },
+      {
+        url: workShopMini_7,
+        title: 'Шинковка',
+      },
+      {
+        url: workShopMini_8,
+        title: 'Ресторанные блюда',
+      },
+    ],
+    isSet: true,
   },
   {
+    id: 3,
+    url: setImpressionsCard,
+    stars: 4,
+    mark: '4,2',
+    reviews: 149,
+    tegs: [
+      {
+        url: fire,
+        text: 'Популярно',
+      },
+      {
+        url: woman,
+        text: 'Для нее',
+      },
+      {
+        url: man,
+        text: 'Для него',
+      },
+      {
+        url: parachute,
+        text: 'Полеты',
+      },
+    ],
+    title: "Набор “Яркие впечатления” для двоих",
+    text: "Хотите миновать столичные пробки на мотоцикле? Хотите чувствовать...",
+    newPrice: "3 495",
+    oldPrice: "3 700",
+    mimiImgs: [
+      {
+        url: workShopMini_11,
+        title: 'Пляж',
+      },
+      {
+        url: workShopMini_12,
+        title: 'Горные реки',
+      },
+      {
+        url: workShopMini_13,
+        title: 'Серфинг',
+      },
+      {
+        url: workShopMini_14,
+        title: 'Воздушный шар',
+      },
+      {
+        url: workShopMini_15,
+        title: 'Параплан',
+      },
+      {
+        url: workShopMini_11,
+        title: 'Пляж',
+      },
+      {
+        url: workShopMini_12,
+        title: 'Горные реки',
+      },
+      {
+        url: workShopMini_13,
+        title: 'Серфинг',
+      },
+    ], 
+    isSet: true,
+  },
+  {
+    id: 4,
     url: divingCard,
     stars: 5,
     mark: '4,9',
@@ -625,15 +761,348 @@ export const fullWhorckShopsList = [
     text: "Хотите миновать столичные пробки на мотоцикле? Хотите чувствовать...",
     newPrice: "2 700",
     oldPrice: "2 900",
-    mimiImgs: [
-      workShopMini_1,
-      workShopMini_2,
-      workShopMini_3,
-      workShopMini_4,
-      workShopMini_5,
-      workShopMini_1,
-      workShopMini_2,
-      workShopMini_3,
-    ]
+    mimiImgs: [],
+    isSet: false,
+  },
+  {
+    id: 5,
+    url: horseCard,
+    stars: 4,
+    mark: '4,4',
+    reviews: 401,
+    tegs: [
+      {
+        url: fire,
+        text: 'Популярно',
+      },
+      {
+        url: woman,
+        text: 'Для нее',
+      },
+      {
+        url: man,
+        text: 'Для него',
+      },
+      {
+        url: parachute,
+        text: 'Полеты',
+      },
+    ],
+    title: "Прогулка на лошадях",
+    text: "Хотите миновать столичные пробки на мотоцикле? Хотите чувствовать...",
+    newPrice: "2 995",
+    oldPrice: "3 500",
+    mimiImgs: [],
+    isSet: false,
+  },
+  {
+    id: 6,
+    url: sushiCard,
+    stars: 3,
+    mark: '3,4',
+    reviews: 149,
+    tegs: [
+      {
+        url: fire,
+        text: 'Популярно',
+      },
+      {
+        url: woman,
+        text: 'Для нее',
+      },
+      {
+        url: man,
+        text: 'Для него',
+      },
+      {
+        url: parachute,
+        text: 'Полеты',
+      },
+    ],
+    title: "Мастер-класс суши",
+    text: "Хотите миновать столичные пробки на мотоцикле? Хотите чувствовать...",
+    newPrice: "3 495",
+    oldPrice: "3 700",
+    mimiImgs: [], 
+    isSet: false,
+  },
+  {
+    id: 7,
+    url: bearCard,
+    stars: 5,
+    mark: '4,9',
+    reviews: 382,
+    tegs: [
+      {
+        url: fire,
+        text: 'Популярно',
+      },
+      {
+        url: woman,
+        text: 'Для нее',
+      },
+      {
+        url: man,
+        text: 'Для него',
+      },
+      {
+        url: parachute,
+        text: 'Полеты',
+      },
+    ],
+    title: "Мастер-класс пивоварения",
+    text: "Хотите миновать столичные пробки на мотоцикле? Хотите чувствовать...",
+    newPrice: "2 700",
+    oldPrice: "2 900",
+    mimiImgs: [],
+    isSet: false,
+  },
+  {
+    id: 8,
+    url: coffeCard,
+    stars: 4,
+    mark: '4,4',
+    reviews: 401,
+    tegs: [
+      {
+        url: fire,
+        text: 'Популярно',
+      },
+      {
+        url: woman,
+        text: 'Для нее',
+      },
+      {
+        url: man,
+        text: 'Для него',
+      },
+      {
+        url: parachute,
+        text: 'Полеты',
+      },
+    ],
+    title: "Мастер-класс рисования на коффе",
+    text: "Хотите миновать столичные пробки на мотоцикле? Хотите чувствовать...",
+    newPrice: "2 995",
+    oldPrice: "3 500",
+    mimiImgs: [],
+    isSet: false,
+  },
+  {
+    id: 9,
+    url: tennisCard,
+    stars: 3,
+    mark: '3,4',
+    reviews: 149,
+    tegs: [
+      {
+        url: fire,
+        text: 'Популярно',
+      },
+      {
+        url: woman,
+        text: 'Для нее',
+      },
+      {
+        url: man,
+        text: 'Для него',
+      },
+      {
+        url: parachute,
+        text: 'Полеты',
+      },
+    ],
+    title: "Мастер-класс тенниса",
+    text: "Хотите миновать столичные пробки на мотоцикле? Хотите чувствовать...",
+    newPrice: "3 495",
+    oldPrice: "3 700",
+    mimiImgs: [], 
+    isSet: false,
+  },
+  {
+    id: 10,
+    url: cocktailCard,
+    stars: 3,
+    mark: '3,4',
+    reviews: 149,
+    tegs: [
+      {
+        url: fire,
+        text: 'Популярно',
+      },
+      {
+        url: woman,
+        text: 'Для нее',
+      },
+      {
+        url: man,
+        text: 'Для него',
+      },
+      {
+        url: parachute,
+        text: 'Полеты',
+      },
+    ],
+    title: "Приготовление коктейлей",
+    text: "Хотите миновать столичные пробки на мотоцикле? Хотите чувствовать...",
+    newPrice: "3 495",
+    oldPrice: "3 700",
+    mimiImgs: [], 
+    isSet: false,
+  },
+  {
+    id: 11,
+    url: vineCard,
+    stars: 3,
+    mark: '3,4',
+    reviews: 149,
+    tegs: [
+      {
+        url: fire,
+        text: 'Популярно',
+      },
+      {
+        url: woman,
+        text: 'Для нее',
+      },
+      {
+        url: man,
+        text: 'Для него',
+      },
+      {
+        url: parachute,
+        text: 'Полеты',
+      },
+    ],
+    title: "Дегустация вина",
+    text: "Хотите миновать столичные пробки на мотоцикле? Хотите чувствовать...",
+    newPrice: "3 495",
+    oldPrice: "3 700",
+    mimiImgs: [], 
+    isSet: false,
+  },
+  {
+    id: 12,
+    url: songCard,
+    stars: 3,
+    mark: '3,4',
+    reviews: 149,
+    tegs: [
+      {
+        url: fire,
+        text: 'Популярно',
+      },
+      {
+        url: woman,
+        text: 'Для нее',
+      },
+      {
+        url: man,
+        text: 'Для него',
+      },
+      {
+        url: parachute,
+        text: 'Полеты',
+      },
+    ],
+    title: "Запись песни в студии",
+    text: "Хотите миновать столичные пробки на мотоцикле? Хотите чувствовать...",
+    newPrice: "3 495",
+    oldPrice: "3 700",
+    mimiImgs: [], 
+    isSet: false,
+  },
+  {
+    id: 12,
+    url: albomCard,
+    stars: 3,
+    mark: '3,4',
+    reviews: 149,
+    tegs: [
+      {
+        url: fire,
+        text: 'Популярно',
+      },
+      {
+        url: woman,
+        text: 'Для нее',
+      },
+      {
+        url: man,
+        text: 'Для него',
+      },
+      {
+        url: parachute,
+        text: 'Полеты',
+      },
+    ],
+    title: "Запись альбома (4 песни)",
+    text: "Хотите миновать столичные пробки на мотоцикле? Хотите чувствовать...",
+    newPrice: "3 495",
+    oldPrice: "3 700",
+    mimiImgs: [], 
+    isSet: false,
+  },
+  {
+    id: 13,
+    url: fishingCard,
+    stars: 3,
+    mark: '3,4',
+    reviews: 149,
+    tegs: [
+      {
+        url: fire,
+        text: 'Популярно',
+      },
+      {
+        url: woman,
+        text: 'Для нее',
+      },
+      {
+        url: man,
+        text: 'Для него',
+      },
+      {
+        url: parachute,
+        text: 'Полеты',
+      },
+    ],
+    title: "Рыбацкая деревня",
+    text: "Хотите миновать столичные пробки на мотоцикле? Хотите чувствовать...",
+    newPrice: "3 495",
+    oldPrice: "3 700",
+    mimiImgs: [], 
+    isSet: false,
+  },
+  {
+    id: 14,
+    url: dancesCard,
+    stars: 3,
+    mark: '3,4',
+    reviews: 149,
+    tegs: [
+      {
+        url: fire,
+        text: 'Популярно',
+      },
+      {
+        url: woman,
+        text: 'Для нее',
+      },
+      {
+        url: man,
+        text: 'Для него',
+      },
+      {
+        url: parachute,
+        text: 'Полеты',
+      },
+    ],
+    title: "Танцевальный мастер-класс",
+    text: "Хотите миновать столичные пробки на мотоцикле? Хотите чувствовать...",
+    newPrice: "3 495",
+    oldPrice: "3 700",
+    mimiImgs: [], 
+    isSet: false,
   },
 ]

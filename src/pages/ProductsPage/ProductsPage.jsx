@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
-import { forWhomNav, themeNav, stocksNav, fullWhorckShopsList } from '../../constants'
+import Review from '../../components/Review/Review';
+
+import { forWhomNav, themeNav, stocksNav, fullWhorckShopsList, reviewsList } from '../../constants'
 import arrow from '../../assets/icons/sort-arrow.svg'
 
 import './ProductsPage.scss';
@@ -18,6 +20,16 @@ const NavItem = (url, text) => {
 };
 
 function ProductsPage() {  
+  const [activeCardComplectation, setActiveCardComplectation] = useState(0);
+
+  const changeActiveComplectation = (id) => {
+    if (activeCardComplectation !== id) {
+      setActiveCardComplectation(id)
+    } else {
+      setActiveCardComplectation(0)
+    }
+  }
+
   return (
     <div className="productsPage">
       <div className="productsPage__header container">
@@ -64,7 +76,16 @@ function ProductsPage() {
       </div>
 
       <div className="productsPage__productList container">
-        {fullWhorckShopsList.map((item) => <ProductFullItem product={item} />)}
+        {fullWhorckShopsList.map((item) => 
+          <ProductFullItem product={item} activeCardComplectation={activeCardComplectation} changeActiveComplectation={changeActiveComplectation} />
+        )}
+      </div>
+
+      <div className="productsPage__reviews container">
+        <h2 className="productsPage__reviews-title">Восторженные отзывы</h2>
+        <div className="productsPage__reviews__box">
+          {reviewsList.map((review) => <Review review={review} />)}
+        </div>
       </div>
     </div>
   );
