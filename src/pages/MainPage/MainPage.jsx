@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import ProductListSlider from '../../components/ProductListSlider/ProductListSlider';
 import Review from '../../components/Review/Review';
-import { forWhomCards, advantages, presentsCards, workshopsCards, productsWorkshopsList, productsSetsList, reviewsList, mainAboutadvantages } from '../../constants'
+import { forWhomCards, advantages, presentsCards, workshopsCards, productsWorkshopsList, productsSetsList, reviewsList, mainAboutAdvantages } from '../../constants'
 
 import mainBg from '../../assets/imgs/main-bg.png'
 import play from '../../assets/icons/play-white.svg'
@@ -122,7 +122,7 @@ function MainPage() {
             Мы поможем вам сделать отличный подарок
           </h2>
           <div className="mainAbout__itemsList">
-            {mainAboutadvantages.map((item) => AdvantageAbout(item.url, item.title, item.txt))}
+            {mainAboutAdvantages.map((item) => AdvantageAbout(item.url, item.title, item.txt))}
           </div>
         </div>
         <img src={mainBg} alt="Bg img" className="mainAbout-img" />

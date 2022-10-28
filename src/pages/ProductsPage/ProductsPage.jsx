@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 
 import Review from '../../components/Review/Review';
-
-import { forWhomNav, themeNav, stocksNav, fullWhorckShopsList, reviewsList } from '../../constants'
-import arrow from '../../assets/icons/sort-arrow.svg'
-
-import './ProductsPage.scss';
 import ProductFullItem from '../../components/ProductFullItem/ProductFullItem';
+
+import { forWhomNav, themeNav, stocksNav, fullWhorckShopsList, reviewsList, productAboutAdvantages } from '../../constants'
+
+import snowboardBg from '../../assets/imgs/snowboard_about.png'
+import arrow from '../../assets/icons/sort-arrow.svg'
+import './ProductsPage.scss';
 
 const NavItem = (url, text) => {
   return (
@@ -86,6 +87,29 @@ function ProductsPage() {
         <div className="productsPage__reviews__box">
           {reviewsList.map((review) => <Review review={review} />)}
         </div>
+      </div>
+
+      <div className="productsPage__about">
+        <div className="productsPage__about__box container">
+          <h2 className="productsPage__about-title">
+            Мы поможем вам сделать отличный подарок
+          </h2>
+          <p className="productsPage__about-text">
+            Ваш подарок может стать исполнением долгожданной мечты или неожиданным приключением. 
+            И он обязательно запомнится, потому что мы отвечаем за организацию программ и полноту впечатлений.
+          </p>
+          <div className="productsPage__about__itemsList">
+            {productAboutAdvantages.map((item) => (
+              <div className="productsPage__about__item">
+                <img src={item.url} alt='icon' className="productsPage__about__item-icon" />
+                <div className="productsPage__about__item__content">
+                  <p className="productsPage__about__item__content-text">{item.txt}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        <img src={snowboardBg} alt="Bg img" className="productsPage__about-img" />
       </div>
     </div>
   );

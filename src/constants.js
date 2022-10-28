@@ -8,7 +8,10 @@ import delivery from './assets/icons/delivery.svg';
 
 import happyWhite from './assets/icons/happy-white.svg';
 import deliveryWhite from './assets/icons/delivery-white.svg';
+import calendarWhite from './assets/icons/calendar-white.svg';
 import giftWhite from './assets/icons/gift-white.svg';
+import locations from './assets/icons/locations.svg';
+import sandGlass from './assets/icons/sand-glass.svg';
 
 import extremeCard from './assets/imgs/extreme_card.png';
 import flyCard from './assets/imgs/fly_card.png';
@@ -384,7 +387,7 @@ export const reviewsList = [
   },
 ]
 
-export const mainAboutadvantages = [
+export const mainAboutAdvantages = [
   {
     url: happyWhite,
     title: "Отобранные впечатления",
@@ -1104,5 +1107,36 @@ export const fullWhorckShopsList = [
     oldPrice: "3 700",
     mimiImgs: [], 
     isSet: false,
+  },
+]
+
+export const productAboutAdvantages = [
+  {
+    url: giftWhite,
+    txt: "Красиво оформим выбранные впечатления",
+  },
+  {
+    url: deliveryWhite,
+    txt: "Быстро доставим удобным способом",
+  },
+  {
+    url: calendarWhite,
+    txt: "Сертификат действует в течение 300 дней",
+  },
+  {
+    url: happyWhite,
+    txt: "Яркие впечатления – идеальный подарок",
+  },
+  {
+    url: locations,
+    txt: "Один сертификат – несколько мест проведения",
+  },
+  {
+    url: sandGlass,
+    txt: "7 лет дарим незабываемые впечатления",
+  },
+  {
+    url: userSupport,
+    txt: "Клиентская поддержка 24/7",
   },
 ]
