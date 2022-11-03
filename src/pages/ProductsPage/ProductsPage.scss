@@ -181,6 +181,10 @@
     flex-wrap: wrap;
     justify-content: space-between;
     padding-bottom: 75px;
+
+    &-also {
+      padding-bottom: 0;
+    }
   }
 
   &__reviews {
@@ -266,6 +270,61 @@
   
     &-img {
       width: 1300px;
+    }
+  }
+
+  &__also {
+    padding-bottom: 100px;
+
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 50px;
+
+      &-title {
+        font-weight: 700;
+        font-size: 44px;
+        color: #222222;
+        margin: 0;
+        padding: 0;
+      }
+
+      &__nav {
+        display: flex;
+        justify-content: space-between;
+
+        &-item {
+          margin: auto;
+          margin-left: 15px;
+          padding: 8px 15px;
+          font-weight: 300;
+          font-size: 18px;
+          color: #222222;
+          border: 1px solid #DDDDDD;
+          border-radius: 999px;
+          transition: 0.2s;
+          cursor: pointer;
+
+          &:hover {
+            box-shadow: 0 0 7px rgba(215, 31, 53, 0.5);
+            transition: 0.2s;
+          }
+
+          &-active {
+            margin: auto;
+            margin-left: 15px;
+            padding: 8px 15px;
+            font-weight: 300;
+            font-size: 18px;
+            border-radius: 999px;
+            transition: 0.2s;
+            cursor: pointer;
+            border: 1px solid #FF3D54;
+            background-color: #FF3D54;
+            color: #FFFFFF;
+          }
+        }
+      }
     }
   }
 }

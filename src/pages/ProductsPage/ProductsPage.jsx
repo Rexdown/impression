@@ -9,6 +9,21 @@ import snowboardBg from '../../assets/imgs/snowboard_about.png'
 import arrow from '../../assets/icons/sort-arrow.svg'
 import './ProductsPage.scss';
 
+const alsoTabs = [
+  {
+    id: 1,
+    text: 'Топ-10',
+  },
+  {
+    id: 2,
+    text: 'Новые',
+  },
+  {
+    id: 3,
+    text: 'Просмотренные',
+  },
+]
+
 const NavItem = (url, text) => {
   return (
     <div className="productsPage__header__navBox__item">
@@ -22,6 +37,7 @@ const NavItem = (url, text) => {
 
 function ProductsPage() {  
   const [activeCardComplectation, setActiveCardComplectation] = useState(0);
+  const [activeAlsoTab, setActiveAlsoTab] = useState(1);
 
   const changeActiveComplectation = (id) => {
     if (activeCardComplectation !== id) {
@@ -110,6 +126,30 @@ function ProductsPage() {
           </div>
         </div>
         <img src={snowboardBg} alt="Bg img" className="productsPage__about-img" />
+      </div>
+
+      <div className="productsPage__also container">
+        <div className="productsPage__also__header">
+          <h2 className="productsPage__also__header-title">
+            Смотрите также
+          </h2>
+          <div className="productsPage__also__header__nav">
+            {alsoTabs.map((item) => (
+              <p 
+                className={`productsPage__also__header__nav-item${item.id === activeAlsoTab ? '-active' : ''}`}
+                onClick={() => setActiveAlsoTab(item.id)}
+              >
+                {item.text}
+              </p>
+            ))}
+          </div>
+        </div>
+
+        <div className="productsPage__productList productsPage__productList-also">
+          {fullWhorckShopsList.slice(7, 10).map((item) => 
+            <ProductFullItem product={item} activeCardComplectation={activeCardComplectation} changeActiveComplectation={changeActiveComplectation} />
+          )}
+        </div>
       </div>
     </div>
   );
