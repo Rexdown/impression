@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation,Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
+import { Link } from 'react-router-dom';
 
 import emptyStar from '../../assets/icons/emptyStar.svg';
 import fillStar from '../../assets/icons/fillStar.svg';
@@ -50,7 +51,9 @@ function ProductFullItem( props ) {
       </p>
 
       <div className="ProductFullItem__buy">
-        <button className="ProductFullItem__buy-btn">Купить</button>
+        <Link to="/product_check" className="ProductFullItem__buy__btn">
+          <p className="ProductFullItem__buy__btn-text">Купить</p>
+        </Link>
         <div className="ProductFullItem__buy__prices">
           <p className="ProductFullItem__buy__prices-newPrice">{`${product.newPrice} ₽`}</p>
           <p className="ProductFullItem__buy__prices-oldPrice">{`${product.oldPrice} ₽`}</p>

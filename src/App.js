@@ -7,6 +7,7 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import MainPage from './pages/MainPage/MainPage';
 import ProductsPage from './pages/ProductsPage/ProductsPage';
+import ProductItemPage from './pages/ProductItemPage/ProductItemPage';
 
 function App() {
   const { pathname } = useLocation();
@@ -21,6 +22,7 @@ function App() {
       <Routes>
         <Route index element={<MainPage />} />
         <Route path="products" element={<ProductsPage />} />
+        <Route path="product_check" element={<ProductItemPage />} />
       </Routes>
       <Footer />
     </div>

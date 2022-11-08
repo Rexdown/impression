@@ -1,0 +1,214 @@
+.productItemPage {
+    padding-top: 90px;
+
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 360px;
+        height: 80px;
+
+        &-item {
+            margin: auto 0;
+            font-weight: 500;
+            font-size: 16px;
+            color: #222222;
+            cursor: pointer;
+            position: relative;
+
+            &::before {
+                position: absolute;
+                content: '';
+                width: 0;
+                height: 3px;
+                bottom: -30px;
+                left: 50%;
+                background: #FF3D54;
+                border-radius: 999px 999px 0px 0px;
+                transition: 0.33s;
+            }
+
+            &:hover::before {
+                left: 0;
+                width: 100%;
+                transition: 0.33s;
+            }
+        }
+    }
+
+    &__main {
+        display: flex;
+        justify-content: space-between;
+
+        height: 1000px;
+        padding-top: 100px;
+        background-color: #F5F5F5;
+
+        &__content {
+            width: 730px;
+            height: 100%;
+        }
+
+        &__productCard {
+            position: sticky;
+
+            top: 100px;
+            right: 360px;
+            width: 365px;
+            height: 540px;
+            padding: 30px;
+
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+
+            &-title {
+                font-weight: 700;
+                font-size: 20px;
+                color: #222222;
+                margin-bottom: 20px;
+            }
+
+            &__info {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 5px;
+
+                &-price {
+                    font-weight: 600;
+                    font-size: 20px;
+                    color: #222222;
+                }
+                &__score {
+                    display: flex;
+    
+                    &-value {
+                        margin: auto 0;
+                        margin-right: 10px;
+                        font-weight: 400;
+                        font-size: 12px;
+                        color: #222222;
+                        opacity: 0.5;
+                    }
+        
+                    &-star {
+                        width: 10px;
+                        height: 10px;
+                        margin: auto 0;
+                        margin-right: 5px;
+    
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                    }
+                }
+                &-oldPrice {
+                    font-weight: 500;
+                    font-size: 16px;
+                    margin: auto 0;
+                    text-decoration-line: line-through;
+                    color: #222222;
+                    opacity: 0.5;
+                }
+                &-reviews {
+                    margin: auto 0;
+                    font-weight: 500;
+                    font-size: 12px;
+                    color: #FF3D54;
+                }
+            }
+
+            &__set {
+                &-title {
+                    position: relative;
+                    margin-top: 40px;
+                    margin-bottom: 15px;
+                    font-weight: 400;
+                    font-size: 14px;
+                    color: #222222;
+                    opacity: 0.6;
+
+                    &::before {
+                        position: absolute;
+                        content: '';
+                        width: 100%;
+                        height: 1px;
+                        top: -20px;
+                        left: 0;
+    
+                        background: #222222;
+                        opacity: 0.3;
+                    }
+                }
+
+                &__item {
+                    display: flex;
+                    cursor: pointer;
+                    margin-bottom: 10px;
+
+                    &-checkbox {
+                        width: 16px;
+                        height: 16px;
+                        margin: auto 0;
+                        margin-right: 10px;
+                        border-radius: 999px;
+                        border: 1px solid #FF3D54;
+
+                        &-active {
+                            width: 7px;
+                            height: 7px;
+                            margin: auto 0;
+                            margin-right: 10px;
+                            border-radius: 999px;
+                            border: 5.5px solid #FF3D54;
+                        }
+                    }
+                    &-name {
+                        margin: auto 0;
+                        font-size: 14px;
+                        font-weight: 400;
+                        color: #222222;
+                        margin-right: 5px;
+                    }
+                    &-text {
+                        margin: auto 0;
+                        font-size: 14px;
+                        font-weight: 400;
+                        color: #222222;
+                        opacity: 0.6;
+                    }
+                }
+
+                &__showMore {
+                    position: relative;
+                    display: flex;
+                    margin-top: 15px;
+                    margin-bottom: 40px;
+
+                    &::after {
+                        position: absolute;
+                        content: '';
+                        width: 100%;
+                        height: 1px;
+                        bottom: -20px;
+                        left: 0;
+    
+                        background: #222222;
+                        opacity: 0.1;
+                    }
+
+                    &-text {
+                        font-weight: 400;
+                        font-size: 14px;
+                        color: #FF3D54;
+                        margin: auto 0;
+                        margin-right: 10px;
+                        cursor: pointer;
+                    }
+                    &-arrow {
+                        margin: auto 0;
+                    }
+                }
+            }
+        }
+    }
+}
