@@ -106,11 +106,11 @@ function ProductFullItem( props ) {
               className={`ProductFullItem__complectation__select 
                 ${props.activeCardComplectation === product.id 
                   ? 'ProductFullItem__complectation__select-active' 
-                  : ''}`
-              }
+                  : ''}
+              `}
             >
               {options.map((option) => (
-                <p className="ProductFullItem__complectation__select-option"
+                <p className={`ProductFullItem__complectation__select-option${props.activeCardComplectation === product.id ? '-active' : ''}`}
                   onClick={() => setSelectOption(option)}
                 >
                   {option}

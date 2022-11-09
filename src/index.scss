@@ -17,3 +17,19 @@ p {
   margin: 0;
   padding: 0;
 }
+
+a {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  font: inherit;
+}
+
+button {
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+  font: inherit;
+  cursor: pointer;
+}
