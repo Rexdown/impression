@@ -1,9 +1,11 @@
 .productItemPage {
     padding-top: 90px;
+    background-color: #F5F5F5;
 
     &__nav {
         display: flex;
         justify-content: space-between;
+        background-color: #fff;
         padding: 0 360px;
         height: 80px;
 
@@ -41,6 +43,7 @@
 
         padding: 0 360px;
         padding-top: 100px;
+        margin-bottom: 135px;
         background-color: #F5F5F5;
 
         &__content {
@@ -189,6 +192,8 @@
             }
 
             &__packaging {
+                margin-bottom: 100px;
+
                 &-title {
                     font-weight: 700;
                     font-size: 44px;
@@ -202,7 +207,207 @@
                     line-height: 140%;
                     color: #222222;
                 }
+                &__item {
+                    display: flex;
+                    width: 100%;
+                    height: 175px;
+                    background: #FFFFFF;
+                    border-radius: 5px;
+                    margin-bottom: 15px;
+
+                    &__content {
+                        padding: 15px;
+
+                        &-title {
+                            font-weight: 600;
+                            font-size: 20px;
+                            color: #222222;
+                            margin-top: 5px;
+                            margin-bottom: 10px;
+                        }
+                        &-price {
+                            font-weight: 600;
+                            font-size: 16px;
+                            color: #FF3D54;
+                            margin-bottom: 10px;
+                        }
+                        &-text {
+                            font-weight: 400;
+                            font-size: 14px;
+                            line-height: 140%;
+                            color: #222222;
+                        }
+                    }
+                }
+                &-textAfter {
+                    margin-top: 50px;
+                    margin-bottom: 25px;
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 140%;
+                    color: #222222;
+                }
+                &__delivery {
+                    margin-bottom: 20px;
+
+                    &__header {
+                        display: flex;
+                        margin-bottom: 10px;
+
+                        &__number {
+                            display: flex;
+                            width: 25px;
+                            height: 25px;
+                            border-radius: 50%;
+                            background: #FF3D54;
+                            margin: auto 0;
+                            margin-right: 15px;
+
+                            &-value {
+                                margin: auto;
+                                font-weight: 600;
+                                font-size: 18px;
+                                color: #FFFFFF;
+                            }
+                        }
+                        &-title {
+                            font-weight: 500;
+                            font-size: 18px;
+                            color: #222222;
+                            margin: auto 0;
+                        }
+                    }
+                    &-text {
+                        font-weight: 400;
+                        font-size: 18px;
+                        line-height: 140%;
+                        color: #222222;
+                        opacity: 0.8;
+                    }
+                }
             }
+
+            &__howItWork {
+                margin-bottom: 100px;
+
+                &-title {
+                    font-weight: 700;
+                    font-size: 44px;
+                    color: #222222;
+                    margin-bottom: 60px;
+                }
+                &__steps {
+                    display: flex;
+                    margin-bottom: 120px;
+
+                    &__item {
+                        position: relative;
+                        display: flex;
+                        width: 55px;
+                        height: 55px;
+                        border-radius: 50%;
+                        background: #FF3D54;
+                        margin-right: 15px;
+
+                        &-num {
+                            font-weight: 600;
+                            font-size: 24px;
+                            line-height: 150%;
+                            color: #FFFFFF;
+                            margin: auto;
+                        }
+                        &-text {
+                            position: absolute;
+                            bottom: -155%;
+                            font-weight: 500;
+                            font-size: 16px;
+                            line-height: 130%;
+                            color: #222222;
+                        }
+                    }
+
+                    &-arrow {
+                        margin-right: 15px;
+                    }
+                }
+
+                &__btn {
+                    display: flex;
+                    cursor: pointer;
+              
+                    width: 280px;
+                    height: 55px;
+                    background: #FF3D54;
+                    border-radius: 10px;
+                    transition: 0.2s;
+              
+                    &:hover {
+                      background: #d71f35;
+                      transition: 0.2s;
+                    }
+              
+                    &__content {
+                        display: flex;
+                        margin: auto;
+                
+                        &-icon {
+                            width: 23px;
+                            margin-right: 10px;
+                        }
+                        &-text {
+                            font-weight: 500;
+                            font-size: 16px;
+                            color: #FFFFFF;
+                        }
+                    }
+                }
+            }
+
+            &__location {
+                &__title {
+                    display: flex;
+                    margin-bottom: 50px;
+    
+                    &-name {
+                        font-weight: 700;
+                        font-size: 44px;
+                        color: #222222;
+                        margin-right: 10px;
+                    }
+                    &-count {
+                        font-weight: 700;
+                        font-size: 44px;
+                        color: #222222;
+                        opacity: 0.5;
+                    }
+                }
+            }
+        }
+    }
+
+    &__reviews {
+        padding: 0 360px;
+
+        &__title {
+            display: flex;
+            margin-bottom: 50px;
+
+            &-name {
+                font-weight: 700;
+                font-size: 44px;
+                color: #222222;
+                margin-right: 10px;
+            }
+            &-count {
+                font-weight: 700;
+                font-size: 44px;
+                color: #222222;
+                opacity: 0.5;
+            }
+        }
+
+        &__slider {
+            height: 10px;
         }
     }
 }

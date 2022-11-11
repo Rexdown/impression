@@ -2,13 +2,13 @@ import React, { useState, useEffect } from 'react';
 import BuyCard from '../../components/BuyCard/BuyCard';
 import ProductItemPageHeader from '../../components/ProductItemPageHeader/ProductItemPageHeader';
 
-import { navArr, accordionArr } from '../../constants';
+import { navArr, accordionArr, DeliveryItems } from '../../constants';
 
-import packaging from '../../assets/imgs/packaging.png';
-import question from '../../assets/icons/question.svg';
-import arrow from '../../assets/icons/catalog-arrow.svg';
-import star from '../../assets/icons/fillStar.svg';
+import arrow from '../../assets/icons/arrow-mini.svg';
 import plus from '../../assets/icons/plus.svg';
+import wrap from '../../assets/icons/wrap.svg';
+import play from '../../assets/icons/play-white.svg'
+import certificate from '../../assets/icons/certificate.png';
 
 import './ProductItemPage.scss';
 
@@ -17,6 +17,33 @@ const ColumnItem = (text) => {
     <div className="productItemPage__main__content__about__column__line">
       <div className="productItemPage__main__content__about__column__line-point" />
       <p className="productItemPage__main__content__about__column__line-text">{text}</p>
+    </div>
+  )
+}
+
+const WraperItem = (img, title, price, text) => {
+  return (
+    <div className="productItemPage__main__content__packaging__item">
+      <img src={img} alt="icon" className="productItemPage__main__content__packaging__item-icon" />
+      <div className="productItemPage__main__content__packaging__item__content">
+        <h4 className="productItemPage__main__content__packaging__item__content-title">{title}</h4>
+        <p className="productItemPage__main__content__packaging__item__content-price">{price}</p>
+        <p className="productItemPage__main__content__packaging__item__content-text">{text}</p>
+      </div>
+    </div>
+  )
+}
+
+const DeliveryItem = (number, title, text) => {
+  return (
+    <div className="productItemPage__main__content__packaging__delivery">
+      <div className="productItemPage__main__content__packaging__delivery__header">
+        <div className="productItemPage__main__content__packaging__delivery__header__number">
+          <p className="productItemPage__main__content__packaging__delivery__header__number-value">{number}</p>
+        </div>
+        <h4 className="productItemPage__main__content__packaging__delivery__header-title">{title}</h4>
+      </div>
+      <p className="productItemPage__main__content__packaging__delivery-text">{text}</p>
     </div>
   )
 }
@@ -88,9 +115,85 @@ function ProductItemPage() {
             <p className="productItemPage__main__content__packaging-text">
               Вы можете выбрать один из двух вариантов упаковки во время оформления заказа
             </p>
+            {WraperItem(
+              wrap,
+              'Подарочная упаковка',
+              '350 ₽',
+              `Сертификат выполнен на плотной бумаге и содержит в себе всю необходимую информацию о подарке 
+              (название, уникальный номер и дату продажи). Упакован в стильный конверт из приятного материала.`
+            )}
+            {WraperItem(
+              certificate,
+              'Электронный сертификат',
+              'Бесплатно',
+              'Вы можете отправить его на e-mail получателю. Сертификат также можно распечатать и вручить лично.'
+            )}
+            <p className="productItemPage__main__content__packaging-textAfter">
+              У нас своя курьерская служба. Это позволяет нам обеспечивать быструю 
+              и своевременную доставку по Москве и ближайшей области.
+            </p>
+            {DeliveryItems.map((item) => (
+              DeliveryItem(item.num, item.title, item.text)
+            ))}
+          </div>
+
+          <div className="productItemPage__main__content__howItWork">
+            <h3 className="productItemPage__main__content__howItWork-title">Как это работает?</h3>
+            <div className="productItemPage__main__content__howItWork__steps">
+              <div className="productItemPage__main__content__howItWork__steps__item">
+                <p className="productItemPage__main__content__howItWork__steps__item-num">1</p>
+                <p className="productItemPage__main__content__howItWork__steps__item-text">
+                  Выбираете подарочный сертификат
+                </p>
+              </div>
+              <img src={arrow} alt="arrow" className="productItemPage__main__content__howItWork__steps-arrow" />
+              <div className="productItemPage__main__content__howItWork__steps__item">
+                <p className="productItemPage__main__content__howItWork__steps__item-num">2</p>
+                <p className="productItemPage__main__content__howItWork__steps__item-text">
+                  Дарите сертификат получателю
+                </p>
+              </div>
+              <img src={arrow} alt="arrow" className="productItemPage__main__content__howItWork__steps-arrow" />
+              <div className="productItemPage__main__content__howItWork__steps__item">
+                <p className="productItemPage__main__content__howItWork__steps__item-num">3</p>
+                <p className="productItemPage__main__content__howItWork__steps__item-text">
+                  Получатель активирует подарок
+                </p>
+              </div>
+              <img src={arrow} alt="arrow" className="productItemPage__main__content__howItWork__steps-arrow" />
+              <div className="productItemPage__main__content__howItWork__steps__item">
+                <p className="productItemPage__main__content__howItWork__steps__item-num">4</p>
+                <p className="productItemPage__main__content__howItWork__steps__item-text">
+                  Яркие впечатления гарантированы
+                </p>
+              </div>
+            </div>
+            <div className="productItemPage__main__content__howItWork__btn">
+              <div className="productItemPage__main__content__howItWork__btn__content">
+                <img src={play} alt="Play" className="productItemPage__main__content__howItWork__btn__content-icon" />
+                <p className="productItemPage__main__content__howItWork__btn__content-text">Смотреть видео</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="productItemPage__main__content__location">
+            <h3 className="productItemPage__main__content__location__title">
+              <p className="productItemPage__main__content__location__title-name">Где проходит</p>
+              <p className="productItemPage__main__content__location__title-count">(2)</p>
+            </h3>
+
+            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab6f77e1ba01817debd940a89ab6dff60b01f2b36df552b768f100693acb36b7b&amp;source=constructor" width="730" height="450" frameborder="0"></iframe>
           </div>
         </div>
         <BuyCard />
+      </div>
+
+      <div className="productItemPage__reviews">
+        <div className="productItemPage__reviews__title">
+          <p className="productItemPage__reviews__title-name">Восторженные отзывы</p>
+          <div className="productItemPage__reviews__title-count">(382)</div>
+        </div>
+        <div className="productItemPage__reviews__slider"></div>
       </div>
     </div>
   );
