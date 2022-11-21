@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './Header.scss';
 
 import logo from '../../assets/imgs/logo.svg'
@@ -22,7 +23,7 @@ function Header() {
     <div className="header">
       <div className={`header__box container`}>
         <div className="header__box__left">
-          <img src={logo} alt="logo" className="header__box__left-logo" />
+          <Link to="/" className="header__box__left-logo"><img src={logo} alt="logo" /></Link>
           <div 
             className="header__box__left__catalog" 
             onClick={() => setActiveCatalog(!activeCatalog)}
@@ -39,11 +40,11 @@ function Header() {
 
         <ul className="header__box__nav">
           <li className="header__box__nav-item">О нас</li>
-          <li className="header__box__nav-item">Как это работает</li>
+          <Link to="how_it_work" className="header__box__nav-item">Как это работает</Link>
           <li className="header__box__nav-item">Доставка</li>
           <li className="header__box__nav-item">Отзывы</li>
           <li className="header__box__nav-item">Служба качества</li>
-          <li className="header__box__nav-item">Контакты</li>
+          <Link to="contacts" className="header__box__nav-item">Контакты</Link>
         </ul>
 
         <div className="header__box__right">

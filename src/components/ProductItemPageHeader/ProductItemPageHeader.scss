@@ -90,7 +90,7 @@
     }
 }
 
-.productItemPageHeader__slider > .swiper-button-next, .swiper-button-prev {
+.productItemPageHeader__slider > .swiper-button-next, .productItemPageHeader__slider > .swiper-button-prev {
     top: 47%;
     width: 70px;
     height: 70px;
@@ -98,12 +98,21 @@
     border: 2px solid #FFFFFF;
     background-color: transparent;
     transition: 0.22s;
+    color: white;
 
     &:hover {
         border: 2px solid #dedede;
         background-color: rgba(143, 143, 143, 0.3);
         transition: 0.22s;
     }
+}
+
+.productItemPageHeader__slider > .swiper-button-next:after {
+    margin-left: 5px;
+}
+
+.productItemPageHeader__slider > .swiper-button-prev:after {
+    margin-right: 5px;
 }
 
 .productItemPageHeader__slider > .swiper-button-prev {

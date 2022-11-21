@@ -1,8 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation } from 'swiper';
+
+import Review from '../../components/Review/Review'
 import BuyCard from '../../components/BuyCard/BuyCard';
+import ProductFullItem from '../../components/ProductFullItem/ProductFullItem';
 import ProductItemPageHeader from '../../components/ProductItemPageHeader/ProductItemPageHeader';
 
-import { navArr, accordionArr, DeliveryItems } from '../../constants';
+import { navArr, accordionArr, DeliveryItems, productReviewsList, shortReviews, fullWhorckShopsList } from '../../constants';
 
 import arrow from '../../assets/icons/arrow-mini.svg';
 import plus from '../../assets/icons/plus.svg';
@@ -10,6 +15,8 @@ import wrap from '../../assets/icons/wrap.svg';
 import play from '../../assets/icons/play-white.svg'
 import certificate from '../../assets/icons/certificate.png';
 
+import 'swiper/css';
+import 'swiper/css/navigation';
 import './ProductItemPage.scss';
 
 const ColumnItem = (text) => {
@@ -50,6 +57,8 @@ const DeliveryItem = (number, title, text) => {
 
 function ProductItemPage() {  
   const [activeAccordion, setActiveAccordion] = useState(0); 
+  const prevRef = useRef(null);
+  const nextRef = useRef(null);
 
   return (
     <div className="productItemPage">
@@ -193,7 +202,41 @@ function ProductItemPage() {
           <p className="productItemPage__reviews__title-name">Восторженные отзывы</p>
           <div className="productItemPage__reviews__title-count">(382)</div>
         </div>
-        <div className="productItemPage__reviews__slider"></div>
+        <Swiper
+          className='productItemPage__reviews__slider'
+          modules={[Navigation]}
+          spaceBetween={60}
+          slidesPerView={2}
+          onInit={(swiper) => {
+            swiper.params.navigation.prevEl = prevRef.current;
+            swiper.params.navigation.nextEl = nextRef.current;
+            swiper.navigation.init();
+            swiper.navigation.update();
+          }}
+        >
+          {productReviewsList.map((item) => 
+            <SwiperSlide>
+                <Review review={item} className="bigReview" />
+            </SwiperSlide>
+          )}
+        </Swiper>
+        <div className='productItemPage__reviews__slider__prev' ref={prevRef} />
+        <div className='productItemPage__reviews__slider__next' ref={nextRef} />
+
+        <h3 className="productItemPage__reviews-subtitle">Если кратко:</h3>
+        <div className="productItemPage__reviews__shortReviews">
+          {shortReviews.map((item) => (
+            <p className="productItemPage__reviews__shortReviews-item">{item}</p>
+          ))}
+        </div>
+      </div>
+
+      <div className="productItemPage__sets">
+        <h2 className="productItemPage__sets-title">Этот подарок входит в наборы</h2>
+        <div className="productItemPage__sets-list">
+          <ProductFullItem product={fullWhorckShopsList[0]} className="ProductFullItem-big" />
+          <ProductFullItem product={fullWhorckShopsList[2]} className="ProductFullItem-big" />
+        </div>
       </div>
     </div>
   );

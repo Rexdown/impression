@@ -300,7 +300,8 @@
   }
 }
 
-.swiper-button-next, .swiper-button-prev {
+.ProductFullItem__slider > .swiper-button-next, 
+.ProductFullItem__slider > .swiper-button-prev {
   top: 30%;
   width: 30px;
   height: 30px;
@@ -320,4 +321,10 @@
 
 .swiper-button-next {
   right: 0;
+}
+
+
+
+.ProductFullItem-big {
+  width: 47.5%;
 }

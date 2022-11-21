@@ -8,6 +8,8 @@ import Footer from './components/Footer/Footer';
 import MainPage from './pages/MainPage/MainPage';
 import ProductsPage from './pages/ProductsPage/ProductsPage';
 import ProductItemPage from './pages/ProductItemPage/ProductItemPage';
+import ContactsPage from './pages/ContactsPage/ContactsPage';
+import HowItWork from './pages/HowItWork/HowItWork';
 
 function App() {
   const { pathname } = useLocation();
@@ -23,6 +25,8 @@ function App() {
         <Route index element={<MainPage />} />
         <Route path="products" element={<ProductsPage />} />
         <Route path="product_check" element={<ProductItemPage />} />
+        <Route path="contacts" element={<ContactsPage />} />
+        <Route path="how_it_work" element={<HowItWork />} />
       </Routes>
       <Footer />
     </div>

@@ -18,9 +18,10 @@ function ProductFullItem( props ) {
   const [selectOption, setSelectOption] = useState('Максимальная (4 человека, 2 часа)');
   const options = ['Минимальная (1 человек, 1 час)', 'Средняя (2 человека, 2 часа)', 'Максимальная (4 человека, 2 часа)'];
   const product = props.product;
+  const className = props.className;
 
   return (
-    <div className={`ProductFullItem ${product.isSet ? 'ProductFullItem-set' : ''}`}>
+    <div className={`ProductFullItem ${product.isSet ? 'ProductFullItem-set' : ''} ${className}`}>
       <img src={product.url} alt="card img" className="ProductFullItem-img" />
       <div className="ProductFullItem__line">
         <div className="ProductFullItem__mark">
@@ -64,6 +65,7 @@ function ProductFullItem( props ) {
         ? <div className="ProductFullItem__content">
             <h4 className="ProductFullItem__content-title">В набор входят:</h4>
             <Swiper
+                className='ProductFullItem__slider'
                 modules={[Navigation,Scrollbar, A11y]}
                 spaceBetween={25}
                 slidesPerView={5}

@@ -45,6 +45,7 @@ import horseReview from './assets/imgs/horseReview.png';
 import motoReview from './assets/imgs/motoReview.png';
 import paragliderReview from './assets/imgs/paragliderReview.png';
 import planeReview from './assets/imgs/planeReview.png';
+import secondHorseReview from './assets/imgs/secondHorseReview.png'
 
 import location from './assets/icons/location.svg'
 import time from './assets/icons/time.svg'
@@ -81,6 +82,10 @@ import workShopMini_12 from './assets/imgs/workShopMini-12.png';
 import workShopMini_13 from './assets/imgs/workShopMini-13.png';
 import workShopMini_14 from './assets/imgs/workShopMini-14.png';
 import workShopMini_15 from './assets/imgs/workShopMini-15.png';
+
+import gift from './assets/icons/gift.svg';
+import parachuteIcon from './assets/icons/parachute-icon.svg';
+import discount from './assets/icons/discount.svg';
 
 
 export const forWhomCards = [
@@ -1229,5 +1234,111 @@ export const DeliveryItems = [
     num: 6,
     title: 'Электронный сертификат',
     text: 'Мгновенная бесплатная доставка на почту. Сертификат прийдет на e-mail.',
+  },
+]
+
+export const productReviewsList = [
+  {
+    url: horseReview,
+    title: "",
+    stars: 5,
+    dignities: ['Отличный инструктор', 'Доступность'],
+    name: "Лена",
+    data: "15 марта 2022",
+    text: "С детства обожаю лошадей! Поэтому очень обрадовалась сертификату на прогулку...",
+  },
+  {
+    url: secondHorseReview,
+    title: "",
+    stars: 5,
+    dignities: ['Эмоции', 'Супер', 'Впечатление', 'Ухоженные животные'],
+    name: "Екатерина",
+    data: "16 ноября 2020",
+    text: "Получили море впечатлений от прогулки на лошадях)) Животные все красивые и ухоженные, инструктор...",
+  },
+  {
+    url: horseReview,
+    title: "",
+    stars: 5,
+    dignities: ['Отличный инструктор', 'Доступность'],
+    name: "Лена",
+    data: "15 марта 2022",
+    text: "С детства обожаю лошадей! Поэтому очень обрадовалась сертификату на прогулку...",
+  },
+  {
+    url: secondHorseReview,
+    title: "",
+    stars: 5,
+    dignities: ['Эмоции', 'Супер', 'Впечатление', 'Ухоженные животные'],
+    name: "Екатерина",
+    data: "16 ноября 2020",
+    text: "Получили море впечатлений от прогулки на лошадях)) Животные все красивые и ухоженные, инструктор...",
+  },
+]
+
+export const shortReviews = [
+  'Отличный инструктор',
+  'Доступность',
+  'Сертификат',
+  'Эмоции',
+  'Супер',
+  'Красиво',
+  'Впечатление',
+  'Ухоженные животные',
+  'Помогли разобраться',
+  'С детьми',
+  'Сервис отличный',
+]
+
+export const howItWorkSteps = [
+  {
+    number: 1,
+    title: 'Выбираете подарочный сертификат',
+    text: 'Покупаете один из подарков или набор нескольких услуг на выбор',
+  },
+  {
+    number: 2,
+    title: 'Дарите сертификат получателю',
+    text: 'Выбираете один из 2 вариантов упаковки: подарочный конверт или онлайн сертификат',
+  },
+  {
+    number: 3,
+    title: 'Получатель активирует подарок',
+    text: 'Сертификат действителен в течении 300 дней. Получатель сам выбирает дату и время проведения',
+  },
+  {
+    number: 4,
+    title: 'Яркие впечатления гарантированы',
+    text: 'Обладатель подарка получает массу положительных эмоций и благодарит вас за удивительное приключение',
+  },
+]
+
+export const howItWorkCards = [
+  {
+    url: gift,
+    title: 'Готовые наборы из нескольких подарков',
+    lis: [
+      'Получатель сам выбирает программу',
+      'Возможность выбрать удобное место проведения',
+      'Услуги в наборе подобраны по схожей цене',
+    ],
+  },
+  {
+    url: parachuteIcon,
+    title: 'Сертификаты на конкретное впечатление',
+    lis: [
+      'Сертификат действует в течение 300 дней',
+      'Возможность выбрать удобное место проведения',
+      'Дополнительные услуги',
+    ],
+  },
+  {
+    url: discount,
+    title: 'Подарки со скидкой',
+    lis: [
+      'Яркое впечатление по выгодной цене',
+      'Регулярно новые акции',
+      'Неизменное качество впечатлений',
+    ],
   },
 ]

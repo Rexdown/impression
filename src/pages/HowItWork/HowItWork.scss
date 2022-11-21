@@ -1,0 +1,123 @@
+.howItWork {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: 960px;
+    padding-top: 90px;
+    background-color: #F5F5F5;
+
+    &-title {
+        font-weight: 700;
+        font-size: 44px;
+        color: #222222;
+        margin-top: 50px;
+        margin-left: 40px;
+        margin-bottom: 50px;
+    }
+    &__steps {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 40px;
+        margin-bottom: 100px;
+
+        &__item {
+            width: 22%;
+
+            &-number {
+                position: relative;
+                font-weight: 600;
+                font-size: 36px;
+                color: #FF3D54;
+                margin-bottom: 30px;
+
+                &::before {
+                    position: absolute;
+                    content: '';
+                    left: 0;
+                    bottom: -15px;
+                    width: 100%;
+                    height: 1px;
+                    background-color: #FF3D54;
+                }
+            }
+            &-title {
+                font-weight: 400;
+                font-size: 16px;
+                color: #222222;
+                margin-bottom: 15px;
+            }
+            &-text {
+                font-weight: 400;
+                font-size: 14px;
+                color: #222222;
+                opacity: 0.8;
+            }
+        }
+    }
+    &__cards {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 40px;
+        margin-bottom: 100px;
+
+        &__item {
+            display: flex;
+            flex-direction: column;
+            width: 31%;
+            height: 460px;
+            border-radius: 30px;
+            background: #FFFFFF;
+
+            &-icon {
+                width: 50px;
+                height: 50px;
+                margin-top: 40px;
+                margin-left: 40px;
+                margin-bottom: 60px;
+            }
+            &-title {
+                height: 60px;
+                font-weight: 500;
+                font-size: 26px;
+                color: #222222;
+                margin-left: 40px;
+                margin-bottom: 20px;
+            }
+            &-li {
+                position: relative;
+                font-weight: 400;
+                font-size: 18px;
+                margin-left: 60px;
+                margin-bottom: 10px;
+                color: rgba(34, 34, 34, 0.8);
+
+                &::after {
+                    position: absolute;
+                    content: '';
+                    width: 7px;
+                    height: 7px;
+                    left: -20px;
+                    top: 30%;
+                    background: #FF3D54;
+                    border-radius: 50%;
+                }
+            }
+            &-btn {
+                margin: 0 40px;
+                height: 60px;
+                background: #FF3D54;
+                border-radius: 10px;
+                margin-top: 30px;
+
+                font-weight: 500;
+                font-size: 16px;
+                color: #FFFFFF;
+
+                &:hover {
+                    background: #f03147;
+                }
+            }
+        }
+    }
+}

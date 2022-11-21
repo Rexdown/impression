@@ -8,9 +8,10 @@ import fillStar from '../../assets/icons/fillStar.svg';
 
 function Review( props ) {
   const review = props.review;
+  const className = props?.className || ''
 
   return (
-    <div className="Review">
+    <div className={`Review ${className}`}>
       <img src={review.url} alt="horse" className="Review-img" />
       <h3 className="Review-title">{review.title}</h3>
       <div className="Review__mark">
