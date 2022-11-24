@@ -39,18 +39,20 @@ function Header() {
         </div>
 
         <ul className="header__box__nav">
-          <li className="header__box__nav-item">О нас</li>
+          <Link to="about_us" className="header__box__nav-item">О нас</Link>
           <Link to="how_it_work" className="header__box__nav-item">Как это работает</Link>
-          <li className="header__box__nav-item">Доставка</li>
+          <Link to="delivery" className="header__box__nav-item">Доставка</Link>
           <li className="header__box__nav-item">Отзывы</li>
-          <li className="header__box__nav-item">Служба качества</li>
+          <Link to="quality" className="header__box__nav-item">Служба качества</Link>
           <Link to="contacts" className="header__box__nav-item">Контакты</Link>
         </ul>
 
         <div className="header__box__right">
-          <button className="header__box__right-btn">Активация Сертификата</button>
+          <Link to="activate" className="header__box__right-btn">Активация Сертификата</Link>
           <img src={search} alt="search" className="header__box__right-icon" />
-          <img src={shoppingCart} alt="Shopping Cart" className="header__box__right-icon" />
+          <Link to="cart" className="header__box__right-icon">
+            <img src={shoppingCart} alt="Shopping Cart" className="header__box__right-icon" />
+          </Link>
         </div>
       </div>
 
@@ -82,8 +84,20 @@ function Header() {
           )}
         </div>
         <div className={`catalog__lastColumn ${activeCatalog ? 'catalog__lastColumn-active' : ''}`}>
-            <p className="catalog__lastColumn-generalOption">Корпоративные</p>
-            <p className="catalog__lastColumn-generalOption">Все наборы</p>
+            <Link 
+              to='company_party' 
+              className="catalog__lastColumn-generalOption"
+              onClick={() => setActiveCatalog(!activeCatalog)}
+            >
+              Корпоративные
+            </Link>
+            <Link 
+              to='products' 
+              className="catalog__lastColumn-generalOption"
+              onClick={() => setActiveCatalog(!activeCatalog)}
+            >
+              Все наборы
+            </Link>
         </div>
       </div>
     </div>

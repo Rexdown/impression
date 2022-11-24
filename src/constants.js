@@ -87,6 +87,18 @@ import gift from './assets/icons/gift.svg';
 import parachuteIcon from './assets/icons/parachute-icon.svg';
 import discount from './assets/icons/discount.svg';
 
+import giftCard from './assets/imgs/giftCard.png';
+import baloonsCard from './assets/imgs/baloonsCard.png';
+import confettiCard from './assets/imgs/confettiCard.png';
+
+import personalOne from './assets/imgs/personal-1.png';
+import personalTwo from './assets/imgs/personal-2.png';
+import personalThree from './assets/imgs/personal-3.png';
+import personalFour from './assets/imgs/personal-4.png';
+
+import receiptImgOne from './assets/imgs/receipt-1.png';
+import receiptImgTwo from './assets/imgs/receipt-2.png';
+import receiptImgThree from './assets/imgs/receipt-3.png';
 
 export const forWhomCards = [
   {
@@ -1340,5 +1352,142 @@ export const howItWorkCards = [
       'Регулярно новые акции',
       'Неизменное качество впечатлений',
     ],
+  },
+]
+
+export const aboutUsCards = [
+  {
+    url: giftCard,
+    title: 'Наборы 20 в 1',
+    text: `
+      В одном наборе 10-20 необычных услуг подобранных по разным тематикам: экстрим, 
+      романтика, обучение, туры. Получатель выбирает подарок самостоятельно.
+    `,  
+  },
+  {
+    url: baloonsCard,
+    title: 'Впечатления в подарок',
+    text: `
+      Подарочный сертификат на конкретную услугу. Выбирайте из множества категорий: 
+      полеты, милитари, СПА и др. Сертификат действует в течение 300 дней.
+    `,  
+  },
+  {
+    url: confettiCard,
+    title: 'Корпоративные подарки',
+    text: `
+      Подарите своим коллегам незабываемые эмоции. Мы поможем сделать отличный праздник: 
+      подберем подарок под событие и поможем организовать процесс.
+    `,  
+  },
+]
+
+export const aboutUsAccordion = [
+  {
+    id: 1,
+    number: '01',
+    ask: 'Я хочу подарить сертификат на несколько услуг. Это возможно?',
+    answer: 'Наличными курьеру, банковским переводом, кредитной картой или через яндекс.деньги. Выбирайте удобный для вас способ!',
+  },
+  {
+    id: 2,
+    number: '02',
+    ask: 'Как можно оплатить покупку подарка?',
+    answer: 'Наличными курьеру, банковским переводом, кредитной картой или через яндекс.деньги. Выбирайте удобный для вас способ!',
+  },
+  {
+    id: 3,
+    number: '03',
+    ask: 'Возможно ли обменять подарок?',
+    answer: 'Наличными курьеру, банковским переводом, кредитной картой или через яндекс.деньги. Выбирайте удобный для вас способ!',
+  },
+  {
+    id: 4,
+    number: '04',
+    ask: 'Как мне вернуть подарок?',
+    answer: 'Наличными курьеру, банковским переводом, кредитной картой или через яндекс.деньги. Выбирайте удобный для вас способ!',
+  },
+  {
+    id: 5,
+    number: '05',
+    ask: 'Какой срок действия подарка?',
+    answer: 'Наличными курьеру, банковским переводом, кредитной картой или через яндекс.деньги. Выбирайте удобный для вас способ!',
+  },
+]
+
+export const personalArr = [
+  {
+    url: personalOne,
+    name: 'Александра',
+    post: 'Менеджер по продажам',
+  },
+  {
+    url: personalTwo,
+    name: 'Александр',
+    post: 'Менеджер по продажам',
+  },
+  {
+    url: personalThree,
+    name: 'Анастасия',
+    post: 'Менеджер по продажам',
+  },
+  {
+    url: personalFour,
+    name: 'Александр',
+    post: 'Менеджер по продажам',
+  },
+]
+
+export const shoppingCartItems = [
+  {
+    id: 1,
+    img: receiptImgOne,
+    count: 1,
+    name: 'Полет на мотодельтаплане',
+    info: ['Электронный сертификат', '10 мин.', '1 чел.'],
+    price: 2900,
+  },
+  {
+    id: 2,
+    img: receiptImgTwo,
+    count: 2,
+    name: 'Дегустация вина',
+    info: ['Электронный сертификат', '2 ч.', '2 чел.'],
+    price: 5400,
+  },
+  {
+    id: 3,
+    img: receiptImgThree,
+    count: 1,
+    name: 'Набор “Экстрим” для него',
+    info: ['Подарочная упаковка'],
+    price: 6800,
+  },
+]
+
+export const shoppingCartDelivery = [
+  {
+    id: 1,
+    title: 'Стандартная доставка',
+    price: 'от 350 ₽',
+    text: 'Доставляем по Москве в пределах МКАД',
+  },
+  {
+    id: 2,
+    title: 'Срочная доставка',
+    price: 'от 500 ₽',
+    text: 'В течение трех часов, в пределах МКАД',
+  },
+  {
+    id: 3,
+    title: 'Доставка за МКАД',
+    price: 'от 500 ₽',
+    text: 'Доставка возможна в этот же день. После заказа менеджер уточнит стоимость доставки',
+  },
+  {
+    id: 4,
+    title: 'Самовывоз',
+    price: 'бесплатно',
+    text: 'Заберите заказ самостоятельно в нашем пункте выдачи с 08:00 до 19:00',
   },
 ]

@@ -1,0 +1,249 @@
+.activatePage {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: 830px;
+    padding-top: 90px;
+    background-color: #F5F5F5;
+
+    &-title {
+        font-weight: 700;
+        font-size: 44px;
+        color: #222222;
+        margin-top: 50px;
+        margin-left: 40px;
+        margin-bottom: 50px;
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        width: calc(100% - 80px);
+    }
+
+    &__left {
+        &__instruction {
+            width: 575px;
+            height: 345px;
+            background: #FFFFFF;
+            border-radius: 30px;
+            margin-bottom: 20px;
+
+            &-title {
+                font-weight: 600;
+                font-size: 20px;
+                color: #222222;
+                padding-top: 35px;
+                margin-left: 30px;
+                margin-bottom: 30px;
+            }
+            &-step {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 140%;
+                color: rgba(34, 34, 34, 0.8);
+                margin-left: 30px;
+                margin-bottom: 17px;
+
+                &.first {
+                    margin-bottom: 5px;
+                }
+                &.last {
+                    margin-bottom: 0;
+                }
+            }
+            &-phone {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 140%;
+                color: #FF3D54;
+                margin-left: 30px;
+                margin-bottom: 15px;
+            }
+        }
+        &__help {
+            position: relative;
+            width: 573px;
+            height: 205px;
+            background: #FFFFFF;
+            border-radius: 30px;
+
+            &-title {
+                font-weight: 600;
+                font-size: 20px;
+                color: #222222;
+                padding-top: 30px;
+                margin-left: 30px;
+                margin-bottom: 15px;
+            }
+            &-text {
+                font-weight: 400;
+                font-size: 14px;
+                color: #222222;
+                opacity: 0.8;
+                margin-left: 30px;
+                margin-bottom: 30px;
+            }
+            &__btn {
+                display: flex;
+                width: 260px;
+                height: 50px;
+                background: #FF3D54;
+                border-radius: 10px;
+                margin-left: 30px;
+                transition: 0.22s;
+                cursor: pointer;
+
+                &:hover {
+                    transition: 0.22s;
+                    background: #ec2e44;
+                }
+
+                &-icon {
+                    width: 25px;
+                    height: 25px;
+                    margin: auto 0;
+                    margin-right: 10px;
+                    margin-left: 30px;
+                }
+                &-text {
+                    font-weight: 600;
+                    font-size: 16px;
+                    color: #FFFFFF;
+                    margin: auto 0;
+                }
+            }
+            &-phone {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+            }
+        }
+    }
+
+    &__middle {
+        position: relative;
+        width: 575px;
+        height: 570px;
+        border: 1px solid rgba(34, 34, 34, 0.1);
+        border-radius: 30px;
+
+        background-image: url(../../assets/imgs/men.png), radial-gradient(100% 100% at 50% 0%, #EEEEEE 0%, #EFEFEE 29.19%, #EFEFED 46.37%, #EBEBE9 65.84%, #E1E1DF 100%);
+        background-position: right bottom;
+        background-repeat: no-repeat;
+
+        &-title {
+            font-weight: 600;
+            font-size: 36px;
+            color: #222222;
+            padding-top: 30px;
+            margin-left: 30px;
+            margin-bottom: 15px;
+        }
+        &-text {
+            font-weight: 400;
+            font-size: 20px;
+            color: #222222;
+            opacity: 0.8;
+            margin-left: 30px;
+            margin-bottom: 25px;
+        }
+        &-btn {
+            width: 260px;
+            height: 50px;
+            margin-left: 30px;
+            background: #FF3D54;
+            border-radius: 10px;
+            font-weight: 400;
+            font-size: 16px;
+            color: #FFFFFF;
+        }
+        &-gifts {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+    }
+
+    &__right {
+        &__packaging {
+            display: flex;
+
+            width: 575px;
+            height: 275px;
+            background: #FFFFFF;
+            border-radius: 20px;
+            margin-bottom: 20px;
+
+            &-icon {
+                border-radius: 20px 0 0 20px;
+            }
+            &__content {
+                width: 250px;
+
+                &-title {
+                    font-weight: 600;
+                    font-size: 20px;
+                    line-height: 150%;
+                    color: #222222;
+                    margin: 20px 20px 10px 20px;
+                }
+                &-price {
+                    font-weight: 600;
+                    font-size: 16px;
+                    color: #FF3D54;
+                    margin-left: 20px;
+                    margin-bottom: 20px;
+                }
+                &-text {
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 140%;
+                    color: #222222;
+                    opacity: 0.8;
+                    margin: 0 20px;
+                }
+            }
+        }
+        &__certificate {
+            display: flex;
+
+            width: 575px;
+            height: 275px;
+            background: #FFFFFF;
+            border-radius: 20px;
+
+            &-icon {
+                border-radius: 20px 0 0 20px;
+            }
+            &__content {
+                width: 250px;
+
+                &-title {
+                    font-weight: 600;
+                    font-size: 20px;
+                    line-height: 150%;
+                    color: #222222;
+                    margin: 20px 20px 10px 20px;
+                }
+                &-price {
+                    font-weight: 600;
+                    font-size: 16px;
+                    color: #FF3D54;
+                    margin-left: 20px;
+                    margin-bottom: 20px;
+                }
+                &-text {
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 140%;
+                    color: #222222;
+                    opacity: 0.8;
+                    margin: 0 20px;
+                }
+            }
+        }
+    }
+}

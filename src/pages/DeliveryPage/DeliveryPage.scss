@@ -1,0 +1,198 @@
+.deliveryPage {
+    display: flex;
+    flex-direction: column;
+    padding-top: 90px;
+    background-color: #F5F5F5;
+
+    &-title {
+        font-weight: 700;
+        font-size: 44px;
+        color: #222222;
+        margin-top: 50px;
+        margin-left: 40px;
+        margin-bottom: 50px;
+    }
+    &-text {
+        width: 720px;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 150%;
+        color: #222222;
+        margin-left: 40px;
+        margin-bottom: 100px;
+    }
+    &-subtitle {
+        font-weight: 600;
+        font-size: 36px;
+        color: #222222;
+        margin-left: 40px;
+        margin-bottom: 50px;
+    }
+    &__cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 0 auto;
+        margin-bottom: 100px;
+        width: calc(100% - 80px);
+
+        &__item {
+            width: 575px;
+            height: 385px;
+            background: #FFFFFF;
+            border-radius: 30px;
+            margin-bottom: 25px;
+
+            &-icon {
+                width: 50px;
+                height: 50px;
+                margin-top: 40px;
+                margin-left: 40px;
+                margin-bottom: 55px;
+            }
+            &-title {
+                font-weight: 500;
+                font-size: 26px;
+                color: #222222;
+                margin-left: 40px;
+                margin-bottom: 20px;
+            }
+            &-line {
+                display: flex;
+                margin: 0 40px;
+                margin-bottom: 15px;
+            }
+            &-line-end {
+                display: flex;
+                margin: 0 40px;
+                margin-bottom: 20px;
+            }
+            &-line-main {
+                display: flex;
+                margin: 0 40px;
+            }
+            &-text {
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 140%;
+                color: rgba(34, 34, 34, 0.8);
+                margin: auto 0;
+            }
+            &-text-bold {
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 140%;
+                color: rgba(34, 34, 34, 0.8);
+                margin: auto 0;
+                margin-right: 6px;
+            }
+            &-text-red {
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 140%;
+                color: #FF3D54;
+                margin: auto 6px;
+            }
+            &-text-main {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 140%;
+                color: rgba(34, 34, 34, 0.8);
+            }
+            &-text-main-red {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 140%;
+                color: #FF3D54;
+                margin: 0 6px;
+            }
+        }
+    }
+
+    &__minicards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 0 auto;
+        margin-bottom: 100px;
+        width: calc(100% - 80px);
+
+        &__item {
+            display: flex;
+            width: 575px;
+            height: 130px;
+            background: #FFFFFF;
+            border-radius: 30px;
+
+            &-icon {
+                width: 50px;
+                height: 50px;
+                margin: auto 40px;
+            }
+            &-title {
+                font-weight: 500;
+                font-size: 26px;
+                color: #222222;
+                margin: auto 0;
+            }
+        }
+    }
+    &__help {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        height: 440px;
+        margin: 0 auto;
+        width: calc(100% - 80px);
+        background: radial-gradient(100% 100% at 50% 0%, #EEEEEE 0%, #EFEFEE 29.19%, #EFEFED 46.37%, #EBEBE9 65.84%, #E1E1DF 100%);
+        border: 1px solid rgba(34, 34, 34, 0.1);
+        border-radius: 30px;
+        margin-bottom: 100px;
+
+        &-title {
+            font-weight: 600;
+            font-size: 36px;
+            color: #222222;
+            margin: 0 auto;
+            margin-top: 100px;
+            margin-bottom: 25px;
+        }
+        &-text {
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 150%;
+            color: #222222;
+            margin: 0 auto;
+            opacity: 0.8;
+        }
+        &-btn {
+            width: 260px;
+            height: 50px;
+            margin: 0 auto;
+            background: #FF3D54;
+            border-radius: 10px;
+            margin-top: 50px;
+
+            font-weight: 400;
+            font-size: 16px;
+            color: #FFFFFF;
+            transition: 0.22s;
+
+            &:hover {
+                transition: 0.22s;
+                background: #ec2f45;
+            }
+        }
+
+        &-gifts {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+        &-men {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+    }
+}

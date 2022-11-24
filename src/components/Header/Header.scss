@@ -103,8 +103,7 @@
         cursor: pointer;
         border: 0;
 
-        width: 250px;
-        height: 45px;
+        padding: 15px 40px;
         margin: auto 0;
         margin-right: 50px;
         background: #FF3D54;
@@ -195,6 +194,8 @@
   }
 
   &__lastColumn {
+    display: flex;
+    flex-direction: column;
     opacity: 0;
     height: 0;
     transition: 0.2s;
@@ -212,7 +213,7 @@
       font-weight: 500;
       font-size: 26px;
       color: #FF3D54;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
       transition: 0.2s;
       cursor: pointer;
 
